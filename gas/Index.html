@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<base target="_top">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&amp;family=Prompt:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0d47a1; --blue:#1976d2; --sky:#e3f2fd; --sky-2:#f4f9ff;
+  --ink:#10243e; --muted:#5b6b7f; --line:#d7e6f7;
+  --amber:#ffc107; --amber-soft:#fff8e1; --amber-ink:#8a5a00;
+  --green:#28a745; --red:#d32f2f; --white:#fff;
+  --r-lg:20px; --r-md:12px; --r-sm:8px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--sky);color:var(--ink);font-family:'IBM Plex Sans Thai','Sarabun',sans-serif;font-size:19px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.display{font-family:'Prompt','IBM Plex Sans Thai',sans-serif;margin:0}
+button{font-family:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+
+ 
+.hero{background:var(--navy);color:#fff;padding:20px 24px 88px}
+.hero-top{display:flex;flex-direction:column;align-items:flex-end;gap:8px;margin-bottom:8px}
+.zoom-ctl{display:inline-flex;align-items:center;gap:6px;color:#bbdefb;font-size:14px}
+.zoom-ctl button{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.4);color:#fff;border-radius:999px;min-width:44px;height:36px;padding:0 12px;font-weight:600;font-size:16px;line-height:1}
+.zoom-ctl button:hover:not(:disabled){background:rgba(255,255,255,.28)}
+.zoom-ctl button:disabled{opacity:.4;cursor:default}
+.zoom-ctl output{min-width:46px;text-align:center;color:#fff;font-weight:600}
+.zm{zoom:var(--z,1)}
+.hero-title{text-align:center}
+.hero h1{font-size:clamp(28px,4.2vw,44px);font-weight:600;line-height:1.25}
+.hero p{margin:8px 0 0;color:#bbdefb;font-size:clamp(18px,2.2vw,24px);font-family:'Prompt',sans-serif;font-weight:500}
+.drive-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#1565c0 0%,#42a5f5 100%);border:1px solid rgba(144,202,249,.55);color:#fff;text-decoration:none;padding:10px 20px;border-radius:999px;font-weight:600;font-size:16px;box-shadow:0 4px 14px rgba(66,165,245,.35);transition:filter .15s,transform .15s}
+.drive-btn:hover{filter:brightness(1.12)}
+
+ 
+.wrap{max-width:none;margin:-56px 0 0;padding:0 24px 40px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}
+.search-box{position:relative;background:#fff;border-radius:var(--r-lg);box-shadow:0 10px 30px rgba(13,71,161,.16);padding:8px}
+.search-box svg{position:absolute;left:24px;top:50%;transform:translateY(-50%);color:var(--blue)}
+#searchInput{width:100%;border:0;background:transparent;font:inherit;font-size:22px;padding:18px 16px 18px 56px;border-radius:var(--r-lg);color:var(--ink)}
+#searchInput:focus{outline:none}
+.search-box:focus-within{box-shadow:0 0 0 3px var(--blue),0 10px 30px rgba(13,71,161,.16)}
+.meta{margin:14px 6px 4px;color:var(--muted);font-size:17px;min-height:26px}
+
+ 
+.card{background:#fff;border-radius:var(--r-md);margin-top:12px;padding:16px 18px;border:1px solid var(--line);border-left:5px solid var(--blue)}
+.card-head{display:flex;gap:12px;align-items:flex-start;justify-content:space-between}
+.card-title{font-family:'Prompt',sans-serif;font-weight:600;font-size:22px;color:var(--navy);line-height:1.35}
+.tube{display:inline-flex;align-items:center;gap:8px;margin-top:6px;font-size:14.5px;color:var(--muted)}
+.dot{width:14px;height:14px;border-radius:50%;border:1.5px solid rgba(0,0,0,.25);flex:none}
+.btn-add{flex:none;background:var(--green);color:#fff;border:0;border-radius:999px;padding:10px 22px;font-size:17px;font-weight:600;transition:transform .12s,background .12s}
+.btn-add:hover{background:#218838}
+.btn-add:active{transform:scale(.95)}
+.btn-add.added{background:var(--sky);color:var(--navy)}
+dl{margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line);display:grid;grid-template-columns:150px minmax(0,1fr);gap:8px 14px;font-size:17.5px}
+dt{color:var(--muted);font-weight:500}
+dd{margin:0;overflow-wrap:anywhere}
+.doc-link{display:inline-block;margin-top:2px;background:var(--sky);color:var(--navy);padding:3px 12px;border-radius:999px;text-decoration:none;font-weight:600;font-size:14.5px}
+.doc-link:hover{background:var(--blue);color:#fff}
+.empty{text-align:center;color:var(--muted);padding:44px 12px;background:#fff;border-radius:var(--r-md);margin-top:12px;border:1px dashed var(--line)}
+.skeleton{height:84px;border-radius:var(--r-md);margin-top:12px;background:linear-gradient(90deg,#fff 25%,#eef5fd 50%,#fff 75%);background-size:200% 100%;animation:sk 1.2s infinite}
+@keyframes sk{to{background-position:-200% 0}}
+
+ 
+aside{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow:auto;background:var(--amber-soft);border:2px solid var(--amber);border-radius:var(--r-lg);padding:20px}
+.basket-head{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.basket-head h2{font-size:24px;font-weight:600}
+.close-sheet{display:none;background:#fff;border:1px solid var(--amber);border-radius:999px;padding:6px 14px;font-size:15px}
+.basket-empty{color:var(--amber-ink);margin:14px 0 4px;font-size:17.5px}
+.sel{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid rgba(255,193,7,.55);font-size:17.5px}
+.sel small{color:var(--muted)}
+.btn-remove{background:#fff;color:var(--red);border:1px solid #f1b5b5;border-radius:999px;padding:2px 12px;font-size:14px}
+.btn-remove:hover{background:var(--red);color:#fff}
+.summary{background:#fff;border-radius:var(--r-md);padding:14px;margin-top:16px}
+.summary h3{font-size:19px;font-weight:600;color:var(--navy);margin-bottom:8px}
+.tube-group{padding:10px 0;border-bottom:1px solid #eef2f7}
+.tube-group:last-child{border-bottom:0}
+.tube-name{display:flex;align-items:center;gap:8px;font-family:'Prompt',sans-serif;font-weight:600;color:var(--navy);font-size:19px}
+.lab-list{list-style:none;margin:6px 0 0;padding:0 0 0 22px;font-size:17px}
+.lab-list li{margin:4px 0}
+.badge{display:inline-block;border-radius:999px;padding:1px 10px;font-size:15px;font-weight:600;color:#fff;white-space:nowrap}
+.b-red{background:var(--red)} .b-blue{background:var(--blue)}
+.total{margin-top:14px;background:#e8f5e9;border:2px solid #a5d6a7;color:#1b5e20;border-radius:var(--r-md);padding:10px;text-align:center;font-weight:700;font-size:21px}
+.note{margin-top:14px;font-size:16.5px;color:var(--red);font-weight:600}
+.odr{width:100%;border-radius:var(--r-sm);border:1px solid var(--line);margin-top:10px;display:block}
+.odr-cap{font-size:13.5px;color:var(--muted);text-align:center;margin:12px 0 0}
+.btn-clear{margin-top:14px;background:transparent;border:1px solid var(--muted);color:var(--muted);border-radius:999px;padding:6px 16px;font-size:14.5px}
+.btn-clear:hover{background:var(--muted);color:#fff}
+
+ 
+.bar{display:none}
+footer{text-align:center;color:var(--muted);font-size:14px;padding:0 16px 32px}
+
+@media(max-width:991px){
+  .wrap{grid-template-columns:1fr;padding-bottom:96px}
+  aside{position:fixed;left:0;right:0;bottom:0;top:auto;z-index:50;max-height:82vh;max-height:82dvh;border-radius:22px 22px 0 0;border-width:2px 0 0;padding-bottom:calc(20px + env(safe-area-inset-bottom));transform:translateY(105%);visibility:hidden;transition:transform .25s,visibility .25s;box-shadow:0 -10px 30px rgba(13,71,161,.25);-webkit-overflow-scrolling:touch}
+  .backdrop{position:fixed;inset:0;z-index:45;background:rgba(10,30,60,.45);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
+  .backdrop.open{opacity:1;visibility:visible}
+  aside.open{transform:none;visibility:visible}
+  .close-sheet{display:inline-block}
+  .bar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:40;align-items:center;justify-content:space-between;background:var(--navy);color:#fff;border:0;border-radius:999px;padding:14px 22px;font-size:16px;font-weight:600;box-shadow:0 8px 24px rgba(13,71,161,.4)}
+  .bar .count{background:var(--amber);color:#3b2a00;border-radius:999px;padding:0 12px}
+  dl{grid-template-columns:1fr;gap:2px}
+  dt{margin-top:8px}
+}
+@media(max-width:600px){
+  body{font-size:16px}
+  .hero{padding:14px 14px 62px}
+  .hero-top{margin-bottom:6px}
+  .drive-btn{font-size:13.5px;padding:7px 14px}
+  .hero h1{font-size:23px}
+  .hero p{font-size:15px;margin-top:4px}
+  .wrap{padding:0 12px 100px;margin-top:-42px;gap:14px}
+  .search-box{padding:4px}
+  .search-box svg{left:18px;width:20px;height:20px}
+  #searchInput{font-size:17px;padding:14px 12px 14px 46px}
+  .meta{font-size:15px;margin:10px 4px 2px}
+  .card{padding:13px 14px;margin-top:10px}
+  .card-head{gap:8px}
+  .card-title{font-size:18px}
+  .tube{font-size:14px}
+  .btn-add{font-size:14.5px;padding:7px 14px}
+  dl{font-size:15px;margin-top:10px;padding-top:8px}
+  .doc-link{font-size:14px;padding:2px 12px}
+  aside{padding:16px 14px calc(16px + env(safe-area-inset-bottom))}
+  .basket-head h2{font-size:19px}
+  .sel{font-size:15px}
+  .basket-empty{font-size:15px}
+  .summary{padding:12px}
+  .summary h3{font-size:16.5px}
+  .tube-name{font-size:16.5px}
+  .lab-list{font-size:15px;padding-left:18px}
+  .badge{font-size:13px}
+  .total{font-size:17.5px}
+  .note{font-size:14px}
+  .bar{font-size:15px;padding:12px 20px;bottom:calc(12px + env(safe-area-inset-bottom))}
+  footer{font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-top">
+    <a class="drive-btn" href="https://shorturl.at/8qQbX" target="_blank" rel="noopener">📁 เอกสารเพิ่มเติม (Google Drive)</a>
+    <div class="zoom-ctl" role="group" aria-label="ปรับขนาดตัวอักษร">
+      <span>ขนาดตัวอักษร</span>
+      <button type="button" id="zOut" onclick="setZoom(zi-1)" aria-label="ลดขนาด">A−</button>
+      <output id="zVal" aria-live="polite">100%</output>
+      <button type="button" id="zIn" onclick="setZoom(zi+1)" aria-label="เพิ่มขนาด">A+</button>
+    </div>
+  </div>
+  <div class="hero-title">
+    <h1>ค้นหารายการตรวจทางห้องปฏิบัติการ</h1>
+    <p>กลุ่มงานเทคนิคการแพทย์ โรงพยาบาลหางดง</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <div class="search-box zm">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input type="search" id="searchInput" placeholder="พิมพ์ชื่อแล็บที่ต้องการหา เช่น CBC, HbA1c" autocomplete="off" aria-label="ค้นหารายการตรวจ" oninput="onType()">
+    </div>
+    <div class="meta zm" id="meta" aria-live="polite"></div>
+    <div id="results" class="zm"></div>
+  </section>
+
+  <aside id="basket" aria-label="รายการที่เลือกตรวจ">
+    <div class="zm"><div class="basket-head">
+      <h2>📋 รายการที่เลือกตรวจ</h2>
+      <button class="close-sheet" onclick="toggleSheet(false)">ปิด</button>
+    </div>
+    <div id="selectedList"></div>
+    <div id="summaryWrap" hidden>
+      <div class="summary">
+        <h3>📦 สรุปภาชนะที่ต้องเตรียม</h3>
+        <div id="containerSummary"></div>
+      </div>
+      <div class="total" id="grandTotal"></div>
+      <div class="note">⚠️ กรุณาตรวจสอบใน "คำอธิบายเพิ่มเติม" กรณีรายการตรวจบางรายการต้องเก็บแยกจากรายการอื่น</div>
+      <p class="odr-cap">ลำดับการเก็บตัวอย่างเลือด (Order of Draw)</p>
+      <img class="odr" src="https://lh3.googleusercontent.com/d/14jya3BAZpW5FVwkvLgnBX9Mu44hh-gx4" alt="Order of Draw">
+      <button class="btn-clear" onclick="clearAll()">ล้างทั้งหมด</button>
+    </div>
+  </div>
+  </aside>
+</main>
+
+<footer>จัดทำโดย ทนพ.ธันย์ บุญทอง นักเทคนิคการแพทย์ชำนาญการ</footer>
+
+<div class="backdrop" id="backdrop" onclick="toggleSheet(false)"></div>
+<button class="bar" id="bar" onclick="toggleSheet(true)" hidden>
+  <span>🛒 ดูรายการที่เลือก</span><span class="count" id="barCount">0</span>
+</button>
+
+<script>
+let header = [], rows = [], loaded = false, selectedItems = [], timer, logTimer;
+
+const specialLabRules = {
+  "Renin":2,"Aldosterone":2,"IGRAs":2,"Ab identification":8,"Acid phosphatase":3,
+  "HbA1c":1,"ANA":1,"Anti-CCP":1,"Anti-Thyroglobulin":1,"Anti-TPO":1,
+  "Beta HCG":1,"Cortisol":1,"CPK":1,"Crypto Ag":1,"Depakin":1,
+  "Dilantin":1,"Vancomycin":1,"FSH":1,"Estradiol":1,"LDH (Serum)":1,
+  "Lipase":1,"Phenobarbital":1,"Prolactin":1,"Parathyroid hormone":1,
+  "TPHA":1,"TSH receptor Ab":1,"CD4":1,"Hb typing":1,
+  "Real-time PCR alpha thal":1,"HLA-B 58:01":1,"HLA-B*5701":1,"HLA B 27":1,
+  "Cadmium":1,"Lead":1,"Toluene":1,"Blood alcohol":1,"KOH":1,
+  "Wright stain":1,"Scabies":1,"Fern test":1,"Tzank's smear":1,
+  "hs-Troponin I":1,"Anti-HIV":1,"HIV Ag":1,"Line probe assay (LPA)":1,
+  "RT-PCR for TB":1,"LPA for Mycobacterial species identification":1,"Vitamin D":1,
+  "Hemoculture for Bacteria":1,"Hemoculture for TB":1,"Culture for fungus":1
+};
+
+
+const TUBE_COLORS = [["ม่วง","#7e57c2"],["แดง","#e53935"],["เหลือง","#fdd835"],["เขียว","#43a047"],
+  ["ฟ้า","#4fc3f7"],["น้ำเงิน","#1e56c8"],["เทา","#9e9e9e"],["ดำ","#212121"],["ขาว","#ffffff"],["ส้ม","#fb8c00"],["ชมพู","#f48fb1"]];
+
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function dotHtml(name){
+  const hit = TUBE_COLORS.find(([k]) => String(name).includes(k));
+  return hit ? `<span class="dot" style="background:${hit[1]}"></span>` : '';
+}
+function linkify(text){
+  return esc(text).replace(/(https?:\/\/[^\s]+)/g,
+    u => `<br><a href="${u}" target="_blank" rel="noopener" class="doc-link">📄 เปิดเอกสาร/แบบฟอร์ม</a>`);
+}
+function getUnit(c){
+  if (c.includes("กระป๋อง")) return "กระป๋อง";
+  if (c.includes("ขวด")) return "ขวด";
+  if (c.includes("Slide")||c.includes("Glucometer")||c.includes("กระดาษกรอง")||c.includes("ถุง")) return "ea";
+  return "หลอด";
+}
+
+// ---- บันทึกการใช้งาน (ไม่ทำให้แอปช้าหรือพังถ้าบันทึกไม่ได้) ----
+function track(type, detail){
+  try{
+    google.script.run.withFailureHandler(()=>{}).logEvent(type, detail||'', navigator.userAgent);
+  }catch(e){}
+}
+
+window.onload = function(){
+  document.getElementById('results').innerHTML = '<div class="skeleton"></div><div class="skeleton"></div>';
+  google.script.run.withSuccessHandler(data=>{
+    header = data[0] || []; rows = data.slice(1); loaded = true;
+    document.getElementById('results').innerHTML = '';
+    document.getElementById('meta').textContent = `พร้อมค้นหา ${rows.length} รายการ`;
+    if (document.getElementById('searchInput').value) startSearch();
+  }).getData();
+  track('visit');
+};
+
+function onType(){
+  clearTimeout(timer); timer = setTimeout(startSearch, 150);
+  clearTimeout(logTimer);
+  const q = document.getElementById('searchInput').value.trim();
+  if (q.length >= 2) logTimer = setTimeout(()=>track('search', q), 1500);
+}
+
+function startSearch(){
+  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+  const out = document.getElementById('results'), meta = document.getElementById('meta');
+  if (!loaded) return;
+  if (!q){ out.innerHTML=''; meta.textContent = `พร้อมค้นหา ${rows.length} รายการ`; return; }
+
+  const cIdx = header.findIndex(h => String(h).includes("ภาชนะ"));
+  let html = '', n = 0;
+  rows.forEach((row, i) => {
+    if (!row.join(" ").toLowerCase().includes(q)) return;
+    n++;
+    const name = row[0], cont = cIdx !== -1 ? row[cIdx] : "ไม่ระบุ";
+    const added = selectedItems.some(s => s.row === i);
+    let details = '';
+    row.forEach((cell, k) => {
+      if (cell && k > 0) details += `<dt>${esc(header[k])}</dt><dd>${linkify(cell)}</dd>`;
+    });
+    html += `<article class="card">
+      <div class="card-head">
+        <div>
+          <div class="card-title">${esc(name)}</div>
+          <div class="tube">${dotHtml(cont)}<span>${esc(cont)}</span></div>
+        </div>
+        <button class="btn-add${added?' added':''}" data-i="${i}" onclick="addToBasket(${i}, this)">${added?'✓ เลือกแล้ว':'+ เลือก'}</button>
+      </div>
+      ${details ? `<dl>${details}</dl>` : ''}
+    </article>`;
+  });
+  out.innerHTML = html || `<div class="empty">ไม่พบรายการที่ตรงกับ "${esc(q)}"<br>ลองพิมพ์ชื่อย่อ หรือสะกดใหม่อีกครั้ง</div>`;
+  meta.textContent = n ? `พบ ${n} รายการ` : '';
+}
+
+function addToBasket(i, btn){
+  const cIdx = header.findIndex(h => String(h).includes("ภาชนะ"));
+  const row = rows[i];
+  selectedItems.push({ row: i, testName: String(row[0]), container: String(cIdx !== -1 ? row[cIdx] : "ไม่ระบุ") });
+  btn.classList.add('added'); btn.textContent = '✓ เลือกแล้ว';
+  track('add', row[0]);
+  updateBasketUI();
+}
+function removeFromBasket(index){ selectedItems.splice(index,1); updateBasketUI(); if (loaded) startSearch(); }
+function clearAll(){ selectedItems = []; updateBasketUI(); if (loaded) startSearch(); toggleSheet(false); }
+function toggleSheet(open){
+  document.getElementById('basket').classList.toggle('open', open);
+  document.getElementById('backdrop').classList.toggle('open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+
+function updateBasketUI(){
+  const list = document.getElementById('selectedList'), wrap = document.getElementById('summaryWrap');
+  const bar = document.getElementById('bar');
+  document.getElementById('barCount').textContent = selectedItems.length;
+  bar.hidden = selectedItems.length === 0;
+
+  if (!selectedItems.length){
+    list.innerHTML = '<p class="basket-empty">ยังไม่ได้เลือกรายการ กดปุ่ม "+ เลือก" ที่รายการตรวจ แล้วระบบจะสรุปภาชนะให้</p>';
+    wrap.hidden = true; return;
+  }
+  wrap.hidden = false;
+
+  let sel = '', grouped = {}, totals = {"หลอด":0,"กระป๋อง":0,"ขวด":0,"ea":0};
+  selectedItems.forEach((it, idx) => {
+    sel += `<div class="sel"><span><strong>${esc(it.testName)}</strong> <small>(${esc(it.container)})</small></span>
+            <button class="btn-remove" onclick="removeFromBasket(${idx})">ลบ</button></div>`;
+    if (it.testName.includes("Body fluid examination")){
+      (grouped["กระป๋องเก็บสิ่งส่งตรวจฝาแดง"] ||= []).push({name:it.testName,type:'jar'});
+      (grouped["K3-EDTA Tube (ม่วง)"] ||= []).push({name:it.testName,type:'tube'});
+    } else {
+      (grouped[it.container] ||= []).push({name:it.testName,type:'normal'});
+    }
+  });
+  list.innerHTML = sel;
+
+  let html = '';
+  for (const tube in grouped){
+    const unit = getUnit(tube); let normal = false;
+    html += `<div class="tube-group"><div class="tube-name">${dotHtml(tube)}${esc(tube)}</div><ul class="lab-list">`;
+    grouped[tube].forEach(o => {
+      if (o.type === 'jar'){ html += `<li>🔸 <strong>${esc(o.name)}</strong> <span class="badge b-red">เก็บแยก 3 กระป๋อง</span></li>`; totals["กระป๋อง"] += 3; }
+      else if (o.type === 'tube'){ html += `<li>🔸 <strong>${esc(o.name)}</strong> <span class="badge b-red">เก็บแยก 1 หลอด</span></li>`; totals["หลอด"] += 1; }
+      else {
+        const key = Object.keys(specialLabRules).find(k => o.name.includes(k));
+        if (key){ const c = specialLabRules[key]; html += `<li>🔸 <strong>${esc(o.name)}</strong> <span class="badge b-red">เก็บแยก ${c} ${unit}</span></li>`; totals[unit] += c; }
+        else normal = true;
+      }
+    });
+    if (normal){ html += `<li>🔹 รายการตรวจทั่วไป <span class="badge b-blue">ใช้ร่วมกัน 1 ${unit}</span></li>`; totals[unit] += 1; }
+    html += `</ul></div>`;
+  }
+  document.getElementById('containerSummary').innerHTML = html;
+  const t = Object.entries(totals).filter(([u,v]) => v > 0).map(([u,v]) => `${v} ${u}`).join(" | ");
+  document.getElementById('grandTotal').textContent = `🛒 รวมต้องเตรียม: ${t || '0'}`;
+}
+const ZOOMS = [0.85, 1, 1.2, 1.4, 1.6];
+let zi = 1;
+function setZoom(i){
+  zi = Math.max(0, Math.min(ZOOMS.length - 1, i));
+  document.documentElement.style.setProperty('--z', ZOOMS[zi]);
+  document.getElementById('zVal').textContent = Math.round(ZOOMS[zi] * 100) + '%';
+  document.getElementById('zOut').disabled = zi === 0;
+  document.getElementById('zIn').disabled = zi === ZOOMS.length - 1;
+  try{ localStorage.setItem('zoomIdx', zi); }catch(e){}
+}
+try{ const v = parseInt(localStorage.getItem('zoomIdx'), 10); if (v >= 0 && v < ZOOMS.length) zi = v; }catch(e){}
+setZoom(zi);
+updateBasketUI();
+</script>
+</body>
+</html>

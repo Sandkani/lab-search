@@ -1,0 +1,1883 @@
+[
+  [
+    "รายการตรวจ",
+    "ประเภทสิ่งส่งตรวจ",
+    "ภาชนะเก็บสิ่งส่งตรวจ",
+    "ราคา (อ้างอิงราคากรมบัญชีกลาง)",
+    "ระยะเวลารอคอยผล (TAT)",
+    "คำอธิบายเพิ่มเติม",
+    "หมวดหมู่ (ใบ Lab)"
+  ],
+  [
+    "CBC",
+    "Blood (เลือด) 1-3 ml",
+    "K3-EDTA Tube (ม่วง)",
+    "90 บาท",
+    "1 ชั่วโมง",
+    "",
+    "Hematology"
+  ],
+  [
+    "Hematocrit (Hct)",
+    "Blood (เลือด) ",
+    "Hematocrit red tube (หลอด Hct) , K3-EDTA Tube (ม่วง)",
+    "30 บาท",
+    "1 ชั่วโมง",
+    "กรณีเจาะเลือดปลายนิ้ว ให้ใส่เลือดใน Hematocrit red tube ประมาณ 2 ใน 3 ของหลอด",
+    "Hematology"
+  ],
+  [
+    "Haemoglobin (Hb)",
+    "Blood (เลือด) 1-3 ml",
+    "K3-EDTA Tube (ม่วง)",
+    "",
+    "1 ชั่วโมง",
+    "",
+    "Hematology"
+  ],
+  [
+    "PBS (Blood smear)",
+    "Blood (เลือด) 1-3 ml",
+    "K3-EDTA Tube (ม่วง)",
+    "",
+    "1 ชั่วโมง",
+    "เจ้าหน้าที่จะทำการเก็บ Slide ไว้ที่ห้องปฏิบัติการ",
+    "Hematology"
+  ],
+  [
+    "PT , INR",
+    "Blood (เลือด) ",
+    "3.2% Na Citrate tube (ฟ้า)",
+    "75 บาท",
+    "1 ชั่วโมง",
+    "ใส่เลือดตามปริมาณขีดสีดำข้าง Tube ",
+    "Hematology"
+  ],
+  [
+    "APTT",
+    "Blood (เลือด)",
+    "3.2% Na Citrate tube (ฟ้า)",
+    "85 บาท",
+    "1 ชั่วโมง",
+    "ใส่เลือดตามปริมาณขีดสีดำข้าง Tube ",
+    "Hematology"
+  ],
+  [
+    "ESR",
+    "Blood (เลือด) 2-3 ml",
+    "K3-EDTA Tube (ม่วง)",
+    "50 บาท",
+    "1 ชั่วโมง",
+    "",
+    "Hematology"
+  ],
+  [
+    "20 WBCT",
+    "Blood (เลือด) 2 ml.",
+    "หลอดแก้ว 12 x 75 mm.",
+    "50 บาท",
+    "30 นาที",
+    "สามารถเจาะส่งแลปโดยให้เลือดอยู่ใน Syringe ได้ , ทดแทนการตรวจ VCT",
+    "Hematology"
+  ],
+  [
+    "G-6-PD",
+    "Blood (เลือด) 1-3 ml",
+    "K3-EDTA Tube (ม่วง)",
+    "70 บาท",
+    "1 ชั่วโมง",
+    "",
+    "Hematology"
+  ],
+  [
+    "Malaria",
+    "Blood (เลือด)",
+    "K3-EDTA Tube (ม่วง)",
+    "50 บาท",
+    "1 ชั่วโมง",
+    "",
+    "Hematology"
+  ],
+  [
+    "HbE screen (DCIP)",
+    "Blood (เลือด)",
+    "K3-EDTA Tube (ม่วง)",
+    "100 บาท",
+    "1 ชั่วโมง",
+    "",
+    "Hematology"
+  ],
+  [
+    "Microfilaria",
+    "Blood (เลือด)",
+    "K3-EDTA Tube (ม่วง)",
+    "190 บาท",
+    "1 ชั่วโมง",
+    "",
+    "Hematology"
+  ],
+  [
+    "Blood sugar (ปลายนิ้ว)",
+    "Blood (เลือด) ปลายนิ้ว",
+    "เจาะปลายนิ้ว ตรวจโดย Glucometer",
+    "40 บาท",
+    "",
+    "งดอาหาร 8-10 ชั่วโมง ก่อนเจาะเลือด สามารถกินน้ำเปล่าได้",
+    "Chemistry"
+  ],
+  [
+    "Blood sugar (แขน)",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว) หรือ Sodium Fluoride (เทา)",
+    "40 บาท",
+    "1-2 ชั่วโมง",
+    "งดอาหาร 8-10 ชั่วโมง ก่อนเจาะเลือด สามารถกินน้ำเปล่าได้",
+    "Chemistry"
+  ],
+  [
+    "HbA1c",
+    "Blood (เลือด) 2-3 ml",
+    "K3-EDTA Tube (ม่วง)",
+    "150 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Chemistry"
+  ],
+  [
+    "BUN",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว)",
+    "40 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Chemistry"
+  ],
+  [
+    "Creatinine with egfr",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว)",
+    "40 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Chemistry"
+  ],
+  [
+    "Electrolyte",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว)",
+    "100 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Chemistry"
+  ],
+  [
+    "Potassium (K)",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว)",
+    "40 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Chemistry"
+  ],
+  [
+    "Sodium (Na)",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว)",
+    "40 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Chemistry"
+  ],
+  [
+    "Chloride (Cl)",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว)",
+    "40 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Chemistry"
+  ],
+  [
+    "Carbondioxide (CO2)",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว)",
+    "40 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Chemistry"
+  ],
+  [
+    "Calcium",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว)",
+    "50 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Chemistry"
+  ],
+  [
+    "Magnesium",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว)",
+    "50 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Chemistry"
+  ],
+  [
+    "Phosphorus",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว)",
+    "50 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Chemistry"
+  ],
+  [
+    "Uric acid",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว)",
+    "60 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Chemistry"
+  ],
+  [
+    "Serum Osmolarity",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว)",
+    "250 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Chemistry"
+  ],
+  [
+    "hs-Troponin I",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว)",
+    "260 บาท",
+    "45 นาที",
+    "กรณีมีการตรวจแลป Chemistry ร่วมด้วยให้ทำการเจาะแยกอีก 1 หลอดเฉพาะ",
+    "Chemistry"
+  ],
+  [
+    "Lipid profile",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว)",
+    "200 บาท",
+    "1-2 ชั่วโมง",
+    "งดอาหาร 10-12 ชั่วโมง ก่อนเจาะเลือด สามารถกินน้ำเปล่าได้",
+    "Chemistry"
+  ],
+  [
+    "Cholesterol",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว)",
+    "60 บาท",
+    "1-2 ชั่วโมง",
+    "งดอาหาร 10-12 ชั่วโมง ก่อนเจาะเลือด สามารถกินน้ำเปล่าได้",
+    "Chemistry"
+  ],
+  [
+    "Triglyceride",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว)",
+    "60 บาท",
+    "1-2 ชั่วโมง",
+    "งดอาหาร 10-12 ชั่วโมง ก่อนเจาะเลือด สามารถกินน้ำเปล่าได้",
+    "Chemistry"
+  ],
+  [
+    "HDL",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว)",
+    "100 บาท",
+    "1-2 ชั่วโมง",
+    "งดอาหาร 10-12 ชั่วโมง ก่อนเจาะเลือด สามารถกินน้ำเปล่าได้",
+    "Chemistry"
+  ],
+  [
+    "LDL",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว)",
+    "150 บาท",
+    "1-2 ชั่วโมง",
+    "งดอาหาร 10-12 ชั่วโมง ก่อนเจาะเลือด สามารถกินน้ำเปล่าได้",
+    "Chemistry"
+  ],
+  [
+    "Liver function test (LFT)",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว)",
+    "290 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Chemistry"
+  ],
+  [
+    "Total protein (Tp)",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว)",
+    "50 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Chemistry"
+  ],
+  [
+    "Albumin (Alb)",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว)",
+    "50 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Chemistry"
+  ],
+  [
+    "SGOT (AST)",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว)",
+    "40 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Chemistry"
+  ],
+  [
+    "SGPT (ALT)",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว)",
+    "40 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Chemistry"
+  ],
+  [
+    "Total bilirubin (T.bil)",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว)",
+    40,
+    "1-2 ชั่วโมง",
+    "",
+    "Chemistry"
+  ],
+  [
+    "Direct billirubin (D.bil)",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว)",
+    "40 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Chemistry"
+  ],
+  [
+    "Alkaline phosphatase (ALP)",
+    "Blood (เลือด) 2-3 ml",
+    "Lithium heparin (เขียว)",
+    "40 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Chemistry"
+  ],
+  [
+    "Arterial blood gas (ABG)",
+    "Artery blood (เลือดจากหลอดเลือดแดง)",
+    "Syringe ที่ทำการเคลือบ Heparin ",
+    "195 บาท",
+    "15 นาที",
+    "",
+    "Chemistry"
+  ],
+  [
+    "Venous blood gas (VBG)",
+    "Vein blood (เลือดจากหลอดเลือดดำ)",
+    "Syringe ที่ทำการเคลือบ Heparin",
+    "195 บาท",
+    "15 นาที",
+    "",
+    "Chemistry"
+  ],
+  [
+    "Gram stain",
+    "Sputum, Urine,Body Fluid หรือ Specimen อื่นๆ ที่ทำการป้าย Slide มา",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาเหลือง, กระป๋องเก็บสิ่งส่งตรวจฝาแดง (กรณีมีส่ง Culture ด้วย) และ Slide ที่ทำการป้าย Specimen",
+    "65 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Micrology (New)"
+  ],
+  [
+    "AFB",
+    "Sputum, Body fluid หรือ Specimen อื่นๆ ที่ทำการป้าย Slide มา",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาเหลือง, กระป๋องเก็บสิ่งส่งตรวจฝาแดง (กรณีมีส่ง Culture ด้วย) และ Slide ที่ทำการป้าย Specimen",
+    "60 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Micrology (New)"
+  ],
+  [
+    "Modified AFB",
+    "Sputum, Body fluid หรือ Specimen อื่นๆ ที่ทำการป้าย Slide มา",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาเหลือง, กระป๋องเก็บสิ่งส่งตรวจฝาแดง (กรณีมีส่ง Culture ด้วย) และ Slide ที่ทำการป้าย Specimen",
+    "70 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Micrology (New)"
+  ],
+  [
+    "UA (Urine analysis)",
+    "Urine (ปัสสาวะ) 10 ml",
+    "กระป๋องเก็บปัสสาวะฝาขาว หรือ กระป๋องเก็บสิ่งส่งตรวจฝาเหลือง",
+    "60 บาท",
+    "1 ชั่วโมง",
+    "ให้เก็บช่วงกลางของปัสสาวะ (Midstream urine)",
+    "Microscopy"
+  ],
+  [
+    "Stool examination",
+    "Stool (อุจจาระ)",
+    "กระป๋องเก็บอุจจาระสีเทาพร้อมฝากดปิด",
+    "30 บาท",
+    "1 ชั่วโมง",
+    "",
+    "Microscopy"
+  ],
+  [
+    "Wet smear",
+    "Vagina swab",
+    "เก็บ swab ใส่ในหลอดพลาสติกใส",
+    "60 บาท",
+    "1 ชั่วโมง",
+    "",
+    "Micrology (New)"
+  ],
+  [
+    "TFT",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "490 บาท",
+    "ดำเนินงานทุกวันจันทร์, พุธ และศุกร์ ออกผลช่วง 13.00 น.เป็นต้นไป",
+    "ให้กดเลือก ตัวย่อย FT3,FT4 และ TSH",
+    "Special Lab (New)"
+  ],
+  [
+    "Free T3 (FT3) ",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "170 บาท",
+    "ดำเนินงานทุกวันจันทร์, พุธ และศุกร์ ออกผลช่วง 13.00 น.เป็นต้นไป",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "Free T4 (FT4)",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "150 บาท",
+    "ดำเนินงานทุกวันจันทร์, พุธ และศุกร์ ออกผลช่วง 13.00 น.เป็นต้นไป",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "TSH",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "170 บาท",
+    "ดำเนินงานทุกวันจันทร์, พุธ และศุกร์ ออกผลช่วง 13.00 น.เป็นต้นไป",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "AFP",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "250 บาท",
+    "3 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "CA 125",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "550 บาท",
+    "3 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "CA 15-3",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "500 บาท",
+    "3 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "CA 19-9",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "550 บาท",
+    "3 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "CEA",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "280 บาท",
+    "3 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "PSA",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "300 บาท",
+    "3 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "Albumin (Body Fluid)",
+    "Body Fluid",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาแดง",
+    "30 บาท",
+    "3 วัน",
+    "ให้เก็บใส่กระป๋องเก็บปัสสาวะฝาแดงทั้งหมด 3 ขวด และทำการเขียนลำดับขวดที่ฝาขวดส่งทางห้องปฏิบัติการ",
+    "Special Lab (New)"
+  ],
+  [
+    "ADA",
+    "Body Fluid",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาแดง",
+    "200 บาท",
+    "3 วัน",
+    "ให้เก็บใส่กระป๋องเก็บปัสสาวะฝาแดงทั้งหมด 3 ขวด และทำการเขียนลำดับขวดที่ฝาขวดส่งทางห้องปฏิบัติการ",
+    "Special Lab (New)"
+  ],
+  [
+    "Aldosterone",
+    "Blood (เลือด) 6-8 ml",
+    "Lithium heparin (เขียว)",
+    "720 บาท",
+    "3 วัน",
+    "เจาะส่ง 2 หลอด ให้ได้เลือด 6-8 ml",
+    "Special Lab (New)"
+  ],
+  [
+    "ANA",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "450 บาท",
+    "5 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "Anti-CCP",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "480 บาท",
+    "5 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "Anti-Thyroglobulin",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "350 บาท",
+    "5 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "Anti-TPO",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "400 บาท",
+    "5 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "Beta HCG",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "160 บาท",
+    "14 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "CIE (Latex agglutination) 5 Ag",
+    "CSF",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาแดง",
+    "800 บาท",
+    "14 วัน",
+    "ให้เก็บใส่กระป๋องเก็บปัสสาวะฝาแดงทั้งหมด 3 ขวด และทำการเขียนลำดับขวดที่ฝาขวดส่งทางห้องปฏิบัติการ",
+    "Special Lab (New)"
+  ],
+  [
+    "Cortisol",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "300 บาท",
+    "3 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "CPK (Total CK)",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "75 บาท",
+    "3 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "Crypto Ag",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "450 บาท",
+    "3 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "Depakin (Sodium valproate)",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "300 บาท",
+    "3 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "Dilantin (Phenytoin)",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "300 บาท",
+    "3 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "Vancomycin",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "300 บาท",
+    "3 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "FSH",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "135 บาท",
+    "3 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "Estradiol (E2)",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "170 บาท",
+    "3 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "LDH (Serum)",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "60 บาท",
+    "3 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "LDH (Body Fluid)",
+    "Body Fluid ",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาแดง",
+    "60 บาท",
+    "3 วัน",
+    "ให้เก็บใส่กระป๋องเก็บปัสสาวะฝาแดงทั้งหมด 3 ขวด และทำการเขียนลำดับขวดที่ฝาขวดส่งทางห้องปฏิบัติการ",
+    "Special Lab (New)"
+  ],
+  [
+    "Lipase",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "200 บาท",
+    "3 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "Phenobarbital",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "240 บาท",
+    "3 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "Prolactin",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "300 บาท",
+    "3 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "Renin",
+    "Blood (เลือด) 6-8 ml",
+    "K3-EDTA Tube (ม่วง)",
+    "800 บาท",
+    "14 วัน",
+    "เจาะส่ง 2 หลอด ให้ได้เลือด 6-8 ml",
+    "Special Lab (New)"
+  ],
+  [
+    "Reticulocyte count",
+    "Blood (เลือด) 2-3 ml",
+    "K3-EDTA Tube (ม่วง)",
+    "40 บาท",
+    "1 ชัวโมง",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "Parathyroid hormone (PTH)",
+    "Blood (เลือด) 2-3 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "210 บาท",
+    "14 วัน",
+    "เจาะส่งแยกเฉพาะจากหลอดงานอื่นๆ",
+    "Special Lab (New)"
+  ],
+  [
+    "Protein (Body Fluid)",
+    "Body Fluid",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาแดง",
+    "60 บาท",
+    "3 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "TPHA",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "100 บาท",
+    "3 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "TSH receptor Ab",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "1,300 บาท",
+    "14 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "Urine VMA",
+    "Urine (ปัสสาวะ)",
+    "เก็็บใส่ขวดที่มีกรด HCl เพื่อรักษาสภาพปัสสาวะ",
+    "300 บาท",
+    "5 วัน",
+    "ให้ประสานห้องแลปก่อนดำเนินการเก็บ",
+    "Special Lab (New)"
+  ],
+  [
+    "Urine Protein",
+    "Urine (ปัสสาวะ) 5-10 ml",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาเหลือง",
+    "40 บาท",
+    "3 วัน",
+    "กรณีสั่ง UPCI ให้กดสั่ง Urine Creatinine ด้วย",
+    "Special Lab (New)"
+  ],
+  [
+    "Urine protein 24 hr.",
+    "Urine (ปัสสาวะ)",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาเหลือง",
+    "40 บาท",
+    "3 วัน",
+    "กดสั่งที่รายการ Urine Protein พร้อมทั้งเขียนแจ้งช่วงเวลาเก็บนำส่งห้องปฏิบัติการ",
+    "Special Lab (New)"
+  ],
+  [
+    "Culture for fungus",
+    "Urine, Sputum, Body fluid และสิ่งตรวจอื่นๆ",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาแดง",
+    "300 บาท",
+    "14 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "Hemoculture for fungus",
+    "Blood (เลือด) 8-10 ml",
+    "ขวด Hemoculture แบบขวดแก้ว ฝาขาวแดง",
+    "1000 บาท",
+    "กรณี No growth 7 วัน / กรณี Growth ดำเนินการต่อ 36 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "HIV Viral load",
+    "Blood (เลือด) 6 ml",
+    "K-3 EDTA tube 5-6 ml (สีม่วง หลอดยาว)",
+    "1,800 บาท",
+    "14 วัน",
+    "ดำเนินการส่งตรวจต่อทุกวันจันทร์ เวลา 12.00 น.",
+    "Special Lab (New)"
+  ],
+  [
+    "CD4",
+    "Blood (เลือด) 3 ml",
+    "K3-EDTA Tube (ม่วง)",
+    "500 บาท",
+    "7 วัน",
+    "ดำเนินการส่งตรวจต่อทุกวันจันทร์ เวลา 12.00 น.",
+    "Special Lab (New)"
+  ],
+  [
+    "Drug resistance",
+    "Blood (เลือด) 6 ml",
+    "K-3 EDTA tube 5-6 ml (สีม่วง หลอดยาว)",
+    "8,000 บาท",
+    "1 เดือน",
+    "ดำเนินการส่งตรวจต่อทุกวันจันทร์ เวลา 12.00 น.",
+    "Special Lab (New)"
+  ],
+  [
+    "Hb typing",
+    "Blood (เลือด) 2-3 ml",
+    "K3-EDTA Tube (ม่วง)",
+    "260 บาท",
+    "14 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "Real-time PCR alpha thal (RT-PCR)",
+    "Blood (เลือด) 2-3 ml",
+    "K3-EDTA Tube (ม่วง)",
+    "500 บาท",
+    "7 วัน",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "HLA-B 58:01 (Allopurinol)",
+    "Blood (เลือด) 3 ml",
+    "K3-EDTA Tube (ม่วง)",
+    "450 บาท",
+    "14 วัน",
+    "แนบแบบฟอร์มส่งตรวจ HLA ด้วยทุกครั้ง\n: https://drive.google.com/file/d/1Z8Ycgb0PDodzdMSnH4SWXFvhWnx9TFF3/view?usp=drive_link",
+    "Special Lab (New)"
+  ],
+  [
+    "HLA-B*5701",
+    "Blood (เลือด) 3 ml",
+    "K3-EDTA Tube (ม่วง)",
+    "450 บาท",
+    "14 วัน",
+    "แนบแบบฟอร์มส่งตรวจ HLA ด้วยทุกครั้ง\n: https://drive.google.com/file/d/1Z8Ycgb0PDodzdMSnH4SWXFvhWnx9TFF3/view?usp=drive_link",
+    "Special Lab (New)"
+  ],
+  [
+    "HLA B 27",
+    "Blood (เลือด) 3 ml",
+    "K3-EDTA Tube (ม่วง)",
+    "450 บาท",
+    "14 วัน",
+    "แนบแบบฟอร์มส่งตรวจ HLA ด้วยทุกครั้ง\n: https://drive.google.com/file/d/1Z8Ycgb0PDodzdMSnH4SWXFvhWnx9TFF3/view?usp=drive_link",
+    "Special Lab (New)"
+  ],
+  [
+    "HBV DNA Viral load",
+    "Blood (เลือด) 6 ml",
+    "K-3 EDTA tube 5-6 ml (สีม่วง หลอดยาว)",
+    "1,800 บาท",
+    "14 วัน",
+    "แนบแบบฟอร์มส่งตรวจ HBV DNA ด้วยทุกครั้ง\n: https://drive.google.com/file/d/1LvOpvsURTTxgwynT7-XvGv9AD3eeY5Oi/view?usp=drive_link",
+    "Special Lab (New)"
+  ],
+  [
+    "HCV RNA Viral load",
+    "Blood (เลือด) 6 ml",
+    "K-3 EDTA tube 5-6 ml (สีม่วง หลอดยาว)",
+    2300,
+    "14 วัน",
+    "แนบแบบฟอร์มส่งตรวจ HCV RNA ด้วยทุกครั้ง\n: https://drive.google.com/file/d/1LvOpvsURTTxgwynT7-XvGv9AD3eeY5Oi/view?usp=drive_link",
+    "Special Lab (New)"
+  ],
+  [
+    "TB Culture & IdenSens.",
+    "Sputum (เสมหะ) และ สิ่งส่งตรวจอื่นๆ",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาแดง",
+    "600 บาท",
+    "กรณี No growth 14 วัน / กรณี Growth ดำเนินการต่อ 90 วัน",
+    "ให้กดสั่งทั้ง 2 รายการ ในใบแลป Clinic TB, แนบแบบฟอร์มส่งตรวจ TB culture ด้วยทุกครั้ง\nแบบฟอร์ม Link Google drive\nตัวย่อ C/S for TB",
+    "Clinic TB , Micrology (New)"
+  ],
+  [
+    "GeneXpert",
+    "Sputum (เสมหะ)",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาเหลือง หรือ กระป๋องเก็บสิ่งส่งตรวจฝาแดง",
+    "880 บาท",
+    "14 วัน",
+    "\"ให้เก็บแยกเสมหะหรือสิ่งส่งตรวจออกมาอีก 1 กระป๋องจากแลปตัวอื่น \nแนบแบบฟอร์มส่งตรวจ LPA ด้วยทุกครั้ง\n: https://drive.google.com/file/d/1NvhnAJkAYR_juRLx895hPqg658-K6CPv/view?usp=drive_link\"",
+    "Clinic TB"
+  ],
+  [
+    "Line probe assay (LPA)",
+    "Sputum (เสมหะ)",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาเหลือง หรือ กระป๋องเก็บสิ่งส่งตรวจฝาแดง",
+    "1,800 บาท",
+    "14 วัน",
+    "ให้เก็บแยกเสมหะหรือสิ่งส่งตรวจออกมาอีก 1 กระป๋องจากแลปตัวอื่น \nแนบแบบฟอร์มส่งตรวจ LPA ด้วยทุกครั้ง\n: https://drive.google.com/file/d/1NvhnAJkAYR_juRLx895hPqg658-K6CPv/view?usp=drive_link",
+    "Clinic TB"
+  ],
+  [
+    "IGRAs",
+    "Blood (เลือด) 6 ml",
+    "Lithium heparin (เขียว)",
+    "2,300 บาท",
+    "14 วัน",
+    "เจาะส่ง 2 หลอด ให้ได้เลือด 6-8 ml แนบแบบฟอร์มส่งตรวจ IGRA ด้วยทุกครั้ง\n: https://drive.google.com/file/d/1NvhnAJkAYR_juRLx895hPqg658-K6CPv/view?usp=drive_link",
+    "Clinic TB"
+  ],
+  [
+    "RT-PCR for TB",
+    "Sputum (เสมหะ) หรือ สิ่งส่งตรวจอื่นๆ",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาเหลือง หรือ กระป๋องเก็บสิ่งส่งตรวจฝาแดง",
+    "1,500 บาท",
+    "14 วัน",
+    "ให้เก็บแยกเสมหะหรือสิ่งส่งตรวจออกมาอีก 1 กระป๋องจากแลปตัวอื่น \nแนบแบบฟอร์มส่งตรวจ RT-PCR fot TB ด้วยทุกครั้ง\n: https://drive.google.com/file/d/1NvhnAJkAYR_juRLx895hPqg658-K6CPv/view?usp=drive_link",
+    "Clinic TB "
+  ],
+  [
+    "LPA for Mycobacterial species identification",
+    "ตำแหน่งที่ต้องการส่งตรวจ",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาเหลือง หรือ กระป๋องเก็บสิ่งส่งตรวจฝาแดง",
+    "2,000 บาท",
+    "14 วัน",
+    "ให้เก็บแยกสิ่งส่งตรวจออกมาอีก 1 กระป๋องจากแลปตัวอื่น และแนบแบบฟอร์มส่งด้วยทุกครั้ง\n: https://drive.google.com/file/d/1NvhnAJkAYR_juRLx895hPqg658-K6CPv/view?usp=drive_link",
+    "Clinic TB"
+  ],
+  [
+    "Urine microalbumin",
+    "Urine (ปัสสาวะ) 5-10 ml",
+    "กระป๋องเก็บปัสสาวะฝาขาว หรือ กระป๋องเก็บสิ่งส่งตรวจฝาเหลือง",
+    "270 บาท",
+    "1 ชั่วโมง",
+    "",
+    "Chemistry"
+  ],
+  [
+    "Urine albumin",
+    "Urine (ปัสสาวะ) 5-10 ml",
+    "กระป๋องเก็บปัสสาวะฝาขาว หรือ กระป๋องเก็บสิ่งส่งตรวจฝาเหลือง",
+    "20 บาท",
+    "30 นาที",
+    "",
+    "Microscopy"
+  ],
+  [
+    "Urine sugar",
+    "Urine (ปัสสาวะ) 5-10 ml",
+    "กระป๋องเก็บปัสสาวะฝาขาว หรือ กระป๋องเก็บสิ่งส่งตรวจฝาเหลือง",
+    "20 บาท",
+    "30 นาที",
+    "",
+    "Microscopy"
+  ],
+  [
+    "75g OGTT",
+    "Blood (เลือด) ",
+    "เจาะปลายนิ้ว ตรวจโดย Glucometer",
+    "170 บาท",
+    "",
+    "",
+    "DM clinic"
+  ],
+  [
+    "Occult blood (FIT test)",
+    "Stool (อุจจาระ)",
+    "กระป๋องเก็บอุจจาระสีเทาพร้อมฝากดปิด",
+    "80 บาท",
+    "30 นาที",
+    "",
+    "Microscopy"
+  ],
+  [
+    "Urine Elyte",
+    "Urine (ปัสสาวะ) 5-10 ml",
+    "กระป๋องเก็บปัสสาวะฝาขาว หรือ กระป๋องเก็บสิ่งส่งตรวจฝาเหลือง",
+    "120 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Microscopy"
+  ],
+  [
+    "Urine K",
+    "Urine (ปัสสาวะ) 5-10 ml",
+    "กระป๋องเก็บปัสสาวะฝาขาว หรือ กระป๋องเก็บสิ่งส่งตรวจฝาเหลือง",
+    "40 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Microscopy"
+  ],
+  [
+    "Urine Na",
+    "Urine (ปัสสาวะ) 5-10 ml",
+    "กระป๋องเก็บปัสสาวะฝาขาว หรือ กระป๋องเก็บสิ่งส่งตรวจฝาเหลือง",
+    "40 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Microscopy"
+  ],
+  [
+    "Urine Cl",
+    "Urine (ปัสสาวะ) 5-10 ml",
+    "กระป๋องเก็บปัสสาวะฝาขาว หรือ กระป๋องเก็บสิ่งส่งตรวจฝาเหลือง",
+    "40 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Microscopy"
+  ],
+  [
+    "Urine Creatinine",
+    "Urine (ปัสสาวะ) 5-10 ml",
+    "กระป๋องเก็บปัสสาวะฝาขาว หรือ กระป๋องเก็บสิ่งส่งตรวจฝาเหลือง",
+    "40 บาท",
+    "1-2 ชั่วโมง",
+    "กรณีสั่ง UPCI ให้กดสั่ง Urine Protein ด้วย",
+    "Microscopy"
+  ],
+  [
+    "Urine Urea",
+    "Urine (ปัสสาวะ) 5-10 ml",
+    "กระป๋องเก็บปัสสาวะฝาขาว หรือ กระป๋องเก็บสิ่งส่งตรวจฝาเหลือง",
+    "40 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Microscopy"
+  ],
+  [
+    "Urine Osmolarity",
+    "Urine (ปัสสาวะ) 5-10 ml",
+    "กระป๋องเก็บปัสสาวะฝาขาว หรือ กระป๋องเก็บสิ่งส่งตรวจฝาเหลือง",
+    "120 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Microscopy"
+  ],
+  [
+    "Urine Ketone",
+    "Urine (ปัสสาวะ) 5-10 ml",
+    "กระป๋องเก็บปัสสาวะฝาขาว หรือ กระป๋องเก็บสิ่งส่งตรวจฝาเหลือง",
+    "40 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Microscopy"
+  ],
+  [
+    "Cadmium",
+    "Blood (เลือด) 3 ml",
+    "K3-EDTA Tube (ม่วง)",
+    "350 บาท",
+    "14 วัน",
+    "",
+    "Drug (ใช้เฉพาะงานอาชีวอนามัย)"
+  ],
+  [
+    "Lead",
+    "Blood (เลือด) 3 ml",
+    "K3-EDTA Tube (ม่วง)",
+    "400 บาท",
+    "14 วัน",
+    "",
+    "Drug (ใช้เฉพาะงานอาชีวอนามัย)"
+  ],
+  [
+    "Toluene",
+    "Blood (เลือด) 3 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "450 บาท",
+    "14 วัน",
+    "",
+    "Drug (ใช้เฉพาะงานอาชีวอนามัย)"
+  ],
+  [
+    "Toluene (Urine)",
+    "Urine (ปัสสาวะ) 10 ml",
+    "กระป๋องเก็บปัสสาวะฝาเหลือง",
+    "450 บาท",
+    "14 วัน",
+    "",
+    "Drug (ใช้เฉพาะงานอาชีวอนามัย)"
+  ],
+  [
+    "Microbilirubin",
+    "Blood (เลือด) ",
+    "เจาะเลือดใส่หลอด Hematocrit red tube ประมาณ 2 ใน 3 ของหลอด และทำการอุดดินน้ำมัน",
+    "40 บาท",
+    "1 ชั่วโมง",
+    "",
+    "Hematology"
+  ],
+  [
+    "Methamphetamine",
+    "Urine (ปัสสาวะ) 5-10 ml",
+    "กระป๋องเก็บปัสสาวะฝาขาว หรือ กระป๋องเก็บสิ่งส่งตรวจฝาเหลือง",
+    "150 บาท",
+    "30 นาที",
+    "",
+    "Serology"
+  ],
+  [
+    "Morphine",
+    "Urine (ปัสสาวะ) 5-10 ml",
+    "กระป๋องเก็บปัสสาวะฝาขาว หรือ กระป๋องเก็บสิ่งส่งตรวจฝาเหลือง",
+    "100 บาท",
+    "30 นาที",
+    "",
+    "Serology"
+  ],
+  [
+    "THC (Marijuana)",
+    "Urine (ปัสสาวะ) 5-10 ml",
+    "กระป๋องเก็บปัสสาวะฝาขาว หรือ กระป๋องเก็บสิ่งส่งตรวจฝาเหลือง",
+    "145 บาท",
+    "30 นาที",
+    "",
+    "Serology"
+  ],
+  [
+    "Blood alcohol",
+    "Blood (เลือด) 3 ml",
+    "K3-EDTA Tube (ม่วง)",
+    "450 บาท",
+    "30 วัน",
+    "แนบแบบฟอร์มส่งตรวจ Blood alcohol ด้วยทุกครั้ง (กรณีเป็นการส่งตรวจเพื่อใช้ทางกฏหมาย)\n: https://drive.google.com/file/d/10pzZuMdpM0H_hPEUwtn1npwdAaOAPEog/view?usp=drive_link",
+    "Crimial Lab"
+  ],
+  [
+    "Acid phosphatase",
+    "Swab สารคัดหลั่งจากร่างกายผู้ถูกล่วงละเมิด",
+    "เก็บ swab ใส่่หลอดพลาสติก 12x75 mm จำนวน 3 หลอดพร้อมเขียนตำแหน่งที่ทำการเก็บทั้ง 3 ตำแหน่ง",
+    "960 บาท",
+    "30 วัน",
+    "แนบแบบฟอร์มส่งตรวจ Acid phosphatase ด้วยทุกครั้ง\n: https://drive.google.com/file/d/1vhrPxI2VmjzTPmp92XzZxzTsbEbqMQrT/view?usp=drive_link",
+    "Crimial Lab"
+  ],
+  [
+    "Anti-HAV IgM",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "300 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Serology"
+  ],
+  [
+    "HbcAb",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "200 บาท",
+    "1-2 ชั่วโมง",
+    "Hepatitis B Core Antibody",
+    "Serology"
+  ],
+  [
+    "HbsAg",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "130 บาท",
+    "1-2 ชั่วโมง",
+    "Hepatitis B surface Antigen",
+    "Serology"
+  ],
+  [
+    "HbsAb",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "150 บาท",
+    "1-2 ชั่วโมง",
+    "Hepatitis B surface Antibody หรือ anti-HBs",
+    "Serology"
+  ],
+  [
+    "Anti-HCV",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "300 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Serology"
+  ],
+  [
+    "Anti-HIV",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง) ",
+    "220 บาท",
+    "2 ชั่วโมง",
+    "แนบใบยินยอมตรวจ Anti-HIV มาด้วยทุกครั้ง , กรณีมีเจาะตรวจร่วมกับ Lab serology อื่นๆให้เจาะเพิ่มอีก 1 หลอด",
+    "Serology"
+  ],
+  [
+    "HIV Ag",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "550 บาท",
+    "14 วัน",
+    "กรณีมีเจาะตรวจร่วมกับ Lab serology อื่นๆให้เจาะเพิ่มอีก 1 หลอด",
+    "Serology"
+  ],
+  [
+    "HIV RT-PCR (Baby)",
+    "Dried blood spots",
+    "กระดาษกรองสำหรับหยดเลือดเก็บ",
+    "1,000 บาท",
+    "14 วัน",
+    "",
+    "Baby clinic"
+  ],
+  [
+    "Typhoid",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "200 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Serology"
+  ],
+  [
+    "Scrub typhus",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "200 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Serology"
+  ],
+  [
+    "Leptospira",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "500 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Serology"
+  ],
+  [
+    "Influenza Ag",
+    "Swab จาก Nasopharyngeal",
+    "นำ Swab จุ่มใน Buffer ทำการบีบผสม buffer กับสารคัดหลั่งแล้วทำการหยดใส่หลุมชุดตรวจ",
+    "400 บาท",
+    "30 นาที",
+    "",
+    "Serology"
+  ],
+  [
+    "Dengue Ag (NS1 Ag)",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "260 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Serology"
+  ],
+  [
+    "Dengue Ab (IgG,IgM)",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "260 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Serology"
+  ],
+  [
+    "Chikungunya Ab",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "250 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Serology"
+  ],
+  [
+    "RPR",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "50 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Serology"
+  ],
+  [
+    "Syphilis strip Ab",
+    "Blood (เลือด) 2-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "100 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Serology"
+  ],
+  [
+    "UPT",
+    "Urine (ปัสสาวะ) 5-10 ml",
+    "กระป๋องเก็บปัสสาวะฝาขาว หรือ กระป๋องเก็บสิ่งส่งตรวจฝาเหลือง",
+    "70 บาท",
+    "30 นาที",
+    "Urine pregnancy test",
+    "Microscopy"
+  ],
+  [
+    "PAP smear",
+    "Collecting swab",
+    "Slide ที่ทำการป้าย Specimen",
+    "100 บาท",
+    "14 วัน",
+    "แนบแบบฟอร์มส่งตรวจ Pathology ด้วยทุกครั้ง\n: https://drive.google.com/file/d/1PK7Zmt-6mUjoeq_YQetRGdDCQLxde8Lz/view?usp=drive_link",
+    "Pathology"
+  ],
+  [
+    "FNA",
+    "Needle biopsy",
+    "Slide ที่ทำการป้าย Specimen",
+    "500 บาท",
+    "14 วัน",
+    "แนบแบบฟอร์มส่งตรวจ Pathology ด้วยทุกครั้ง\n: https://drive.google.com/file/d/1PK7Zmt-6mUjoeq_YQetRGdDCQLxde8Lz/view?usp=drive_link",
+    "Pathology"
+  ],
+  [
+    "Cytology",
+    "Body fluid",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาเหลือง หรือ ขวดน้ำเกลือที่ล้างสะอาด",
+    "500 บาท",
+    "14 วัน",
+    "แนบแบบฟอร์มส่งตรวจ Pathology ด้วยทุกครั้ง\n: https://drive.google.com/file/d/1PK7Zmt-6mUjoeq_YQetRGdDCQLxde8Lz/view?usp=drive_link",
+    "Pathology"
+  ],
+  [
+    "Biopsy < 2 cm",
+    "Biopsy",
+    "เก็บชิ้นเนื้อใส่ถุงหรือขวดที่มี ฟอร์มาลิน 10% ",
+    "240 บาท",
+    "14 วัน",
+    "แนบแบบฟอร์มส่งตรวจ Pathology ด้วยทุกครั้ง\n: https://drive.google.com/file/d/1PK7Zmt-6mUjoeq_YQetRGdDCQLxde8Lz/view?usp=drive_link",
+    "Pathology"
+  ],
+  [
+    "Biopsy 2-5 cm",
+    "Biopsy",
+    "เก็บชิ้นเนื้อใส่ถุงหรือขวดที่มี ฟอร์มาลิน 10% ",
+    "500 บาท",
+    "14 วัน",
+    "แนบแบบฟอร์มส่งตรวจ Pathology ด้วยทุกครั้ง\n: https://drive.google.com/file/d/1PK7Zmt-6mUjoeq_YQetRGdDCQLxde8Lz/view?usp=drive_link",
+    "Pathology"
+  ],
+  [
+    "Biopsy > 5 cm",
+    "Biopsy",
+    "เก็บชิ้นเนื้อใส่ถุงหรือขวดที่มี ฟอร์มาลิน 10% ",
+    "1,000 บาท",
+    "14 วัน",
+    "แนบแบบฟอร์มส่งตรวจ Pathology ด้วยทุกครั้ง\n: https://drive.google.com/file/d/1PK7Zmt-6mUjoeq_YQetRGdDCQLxde8Lz/view?usp=drive_link",
+    "Pathology"
+  ],
+  [
+    "Biopsy for H.pylori",
+    "Biopsy",
+    "เก็บชิ้นเนื้อใส่ถุงหรือขวดที่มี ฟอร์มาลิน 10% ",
+    "300 บาท",
+    "14 วัน",
+    "",
+    "Pathology"
+  ],
+  [
+    "Surgery (ที่ต้องเลาะตรวจต่อมน้ำเหลือง)",
+    "Surgery mass",
+    "เก็บชิ้นเนื้อใส่ถุงที่มี ฟอร์มาลิน 10% ",
+    "2,400 บาท",
+    "14 วัน",
+    "แนบแบบฟอร์มส่งตรวจ Pathology ด้วยทุกครั้ง\n: https://drive.google.com/file/d/1PK7Zmt-6mUjoeq_YQetRGdDCQLxde8Lz/view?usp=drive_link",
+    "Pathology"
+  ],
+  [
+    "Surgery (ที่ไม่ต้องเลาะตรวจต่อมน้ำเหลือง)",
+    "Surgery mass",
+    "เก็บชิ้นเนื้อใส่ถุงที่มี ฟอร์มาลิน 10% ",
+    "1,200 บาท",
+    "14 วัน",
+    "แนบแบบฟอร์มส่งตรวจ Pathology ด้วยทุกครั้ง\n: https://drive.google.com/file/d/1PK7Zmt-6mUjoeq_YQetRGdDCQLxde8Lz/view?usp=drive_link",
+    "Pathology"
+  ],
+  [
+    "KOH",
+    "บริเวณผิวหนังหรือจุดที่ต้องการตรวจ",
+    "Slide ที่ทำการป้าย Specimen , กรณีเก็บจากตึกผู้ป่วยให้ทำการขูดประกบ Slide ใส่ซองซิปส่ง",
+    "60 บาท",
+    "30 นาที",
+    "",
+    "Micrology (New)"
+  ],
+  [
+    "Wright stain",
+    "บริเวณผิวหนังหรือจุดที่ต้องการตรวจ",
+    "Slide ที่ทำการป้าย Specimen , กรณีเก็บจากตึกผู้ป่วยให้ทำการขูดประกบ Slide ใส่ซองซิปส่ง",
+    "190 บาท",
+    "30 นาที",
+    "",
+    "Micrology (New)"
+  ],
+  [
+    "Scabies",
+    "บริเวณผิวหนังหรือจุดที่ต้องการตรวจ",
+    "Slide ที่ทำการป้าย Specimen , กรณีเก็บจากตึกผู้ป่วยให้ทำการขูดประกบ Slide ใส่ซองซิปส่ง",
+    "60 บาท",
+    "30 นาที",
+    "",
+    "Micrology (New)"
+  ],
+  [
+    "Fern test",
+    "บริเวณผิวหนังหรือจุดที่ต้องการตรวจ",
+    "Slide ที่ทำการป้าย Specimen , กรณีเก็บจากตึกผู้ป่วยให้ทำการขูดประกบ Slide ใส่ซองซิปส่ง",
+    "50 บาท",
+    "30 นาที",
+    "",
+    "Micrology (New)"
+  ],
+  [
+    "Tzank's smear",
+    "บริเวณผิวหนังหรือจุดที่ต้องการตรวจ",
+    "Slide ที่ทำการป้าย Specimen , กรณีเก็บจากตึกผู้ป่วยให้ทำการขูดประกบ Slide ใส่ซองซิปส่ง",
+    "80 บาท",
+    "30 นาที",
+    "",
+    "Micrology (New)"
+  ],
+  [
+    "Hemoculture for Bacteria",
+    "Blood (เลือด) 8-10 ml",
+    "ขวด Hemoculture สีน้ำเงิน (ผู้ใหญ่) หรือ ขวด Hemoculture สีแดง (เด็ก)",
+    "300 บาท",
+    "กรณี No growth 5 วัน / กรณี Growth ดำเนินการต่อ 3-5 วันนับจากวันที่แจ้ง Growth",
+    "ตัวย่อ H/C",
+    "Micrology (New)"
+  ],
+  [
+    "Hemoculture for TB",
+    "Blood (เลือด) 8-10 ml",
+    "ขวด Hemoculture แบบขวดแก้ว ฝาขาวแดง",
+    "1000 บาท",
+    "กรณี No growth 14 วัน / กรณี Growth ดำเนินการต่อ 90 วัน",
+    "ตััวย่อ H/C for TB",
+    "Micrology (New)"
+  ],
+  [
+    "Urine culture",
+    "Urine (ปัสสาวะ)",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาแดง",
+    "250 บาท",
+    "กรณี No growth 2 วัน / กรณี Growth ดำเนินการต่อ 3-5 วันนับจากวันที่ส่ง",
+    "ตัวย่อ U/C",
+    "Micrology (New)"
+  ],
+  [
+    "Sputum culture",
+    "Sputum (เสมหะ)",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาแดง",
+    "250 บาท",
+    "กรณี No growth 2 วัน / กรณี Growth ดำเนินการต่อ 3-5 วันนับจากวันที่ส่ง",
+    "ตัวย่อ Sputum c/s",
+    "Micrology (New)"
+  ],
+  [
+    "Pleural fluid culture",
+    "Pleural fluid ",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาแดง",
+    "250 บาท",
+    "กรณี No growth 2 วัน / กรณี Growth ดำเนินการต่อ 3-5 วันนับจากวันที่ส่ง",
+    "ตัวย่อ fluid c/s กระป๋องเก็บปัสสาวะฝาแดงให้เก็บใส่ทั้งหมด 3 ขวด และทำการเขียนลำดับขวดที่ฝาขวดส่งทางห้องปฏิบัติการ",
+    "Micrology (New)"
+  ],
+  [
+    "Pus culture",
+    "Pus (แผลหนอง)",
+    "Stuart transport medium (จุกสีขาว) หรืิอ กระป๋องเก็บปัสสาวะฝาแดง พร้อมระบุตำแหน่ง",
+    "250 บาท",
+    "กรณี No growth 2 วัน / กรณี Growth ดำเนินการต่อ 3-5 วันนับจากวันที่ส่ง",
+    "ตัวย่อ pus c/s",
+    "Micrology (New)"
+  ],
+  [
+    "Routine culture",
+    "สิ่งส่งตรวจจากส่วนต่างๆ",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาแดง พร้อมระบุตำแหน่ง",
+    "250 บาท",
+    "กรณี No growth 2 วัน / กรณี Growth ดำเนินการต่อ 3-5 วันนับจากวันที่ส่ง",
+    "",
+    "Micrology (New)"
+  ],
+  [
+    "CSF culture",
+    "CSF",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาแดง",
+    "250 บาท",
+    "กรณี No growth 2 วัน / กรณี Growth ดำเนินการต่อ 3-5 วันนับจากวันที่ส่ง",
+    "ตัวย่อ CSF c/s กระป๋องเก็บปัสสาวะฝาแดงให้เก็บใส่ทั้งหมด 3 ขวด และทำการเขียนลำดับขวดที่ฝาขวดส่งทางห้องปฏิบัติการ",
+    "Micrology (New)"
+  ],
+  [
+    "Abdominal fluid culture",
+    "Abdominal fluid",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาแดง",
+    "250 บาท",
+    "กรณี No growth 2 วัน / กรณี Growth ดำเนินการต่อ 3-5 วันนับจากวันที่ส่ง",
+    "ตัวย่อ fluid c/s กระป๋องเก็บปัสสาวะฝาแดงให้เก็บใส่ทั้งหมด 3 ขวด และทำการเขียนลำดับขวดที่ฝาขวดส่งทางห้องปฏิบัติการ",
+    "Micrology (New)"
+  ],
+  [
+    "Synovial fluid culture",
+    "Synovial fluid",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาแดง",
+    "250 บาท",
+    "กรณี No growth 2 วัน / กรณี Growth ดำเนินการต่อ 3-5 วันนับจากวันที่ส่ง",
+    "ตัวย่อ fluid c/s กระป๋องเก็บปัสสาวะฝาแดงให้เก็บใส่ทั้งหมด 3 ขวด และทำการเขียนลำดับขวดที่ฝาขวดส่งทางห้องปฏิบัติการ",
+    "Micrology (New)"
+  ],
+  [
+    "Stool culture",
+    "Stool (อุจจาระ)",
+    "Cary blair transport medium (จุกสีแดง) หรือ ตลับใส่อุจจาระฝากดปิด",
+    "250 บาท",
+    "กรณี No growth 2 วัน / กรณี Growth ดำเนินการต่อ 3-5 วันนับจากวันที่ส่ง",
+    "ตัวย่อ Stool c/s ",
+    "Micrology (New)"
+  ],
+  [
+    "Peritoneal dialysis (PD) culture",
+    "Peritoneal dialysis (PD)",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาแดง",
+    "250 บาท",
+    "กรณี No growth 2 วัน / กรณี Growth ดำเนินการต่อ 3-5 วันนับจากวันที่ส่ง",
+    "ตัวย่อ PD c/s",
+    "Micrology (New)"
+  ],
+  [
+    "Culture for CRE",
+    "Urine, Sputum และ Stool",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาแดง หรือ Cary blair transport medium (จุกสีแดง) กรณี Stool",
+    "250 บาท",
+    "7 วัน",
+    "ตัวย่อ c/s for CRE",
+    "Micrology (New)"
+  ],
+  [
+    "Culture for VRE",
+    "Urine, Sputum และ Stool",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาแดง หรือ Cary blair transport medium (จุกสีแดง) กรณี Stool",
+    "250 บาท",
+    "7 วัน",
+    "ตัวย่อ c/s for VRE",
+    "Micrology (New)"
+  ],
+  [
+    "Body fluid examination (Count,Diff)",
+    "Body fluid",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาแดง และ K3-EDTA Tube (ม่วง)",
+    "50 บาท",
+    "1-2 ชั่วโมง",
+    "ให้เก็บใส่กระป๋องเก็บปัสสาวะฝาแดงทั้งหมด 3 ขวด และทำการเขียนลำดับขวดที่ฝาขวดส่งทางห้องปฏิบัติการ",
+    "Microscopy"
+  ],
+  [
+    "Sugar (Body fluid)",
+    "Body fluid",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาแดง หรือ K3-EDTA Tube (ม่วง)",
+    "40 บาท",
+    "1-2 ชั่วโมง",
+    "ให้เก็บใส่กระป๋องเก็บปัสสาวะฝาแดงทั้งหมด 3 ขวด และทำการเขียนลำดับขวดที่ฝาขวดส่งทางห้องปฏิบัติการ",
+    "Microscopy"
+  ],
+  [
+    "India Ink",
+    "CSF",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาแดง",
+    "60 บาท",
+    "1-2 ชั่วโมง",
+    "ให้เก็บใส่กระป๋องเก็บปัสสาวะฝาแดงทั้งหมด 3 ขวด และทำการเขียนลำดับขวดที่ฝาขวดส่งทางห้องปฏิบัติการ",
+    "Microscopy"
+  ],
+  [
+    "Crystal",
+    "Synovial fluid",
+    "K3-EDTA Tube (ม่วง)",
+    "50 บาท",
+    "1-2 ชั่วโมง",
+    "ให้เก็บใส่กระป๋องเก็บปัสสาวะฝาแดงทั้งหมด 3 ขวด และทำการเขียนลำดับขวดที่ฝาขวดส่งทางห้องปฏิบัติการ",
+    "Microscopy"
+  ],
+  [
+    "Crypto Ag (CSF)",
+    "CSF",
+    "กระป๋องเก็บสิ่งส่งตรวจฝาแดง",
+    "450 บาท",
+    "3 วัน",
+    "ให้เก็บใส่กระป๋องเก็บปัสสาวะฝาแดงทั้งหมด 3 ขวด และทำการเขียนลำดับขวดที่ฝาขวดส่งทางห้องปฏิบัติการ",
+    "Microscopy"
+  ],
+  [
+    "OGTT",
+    "Blood (เลือด) ",
+    "เจาะปลายนิ้ว ตรวจโดย Glucometer",
+    "300 บาท",
+    "",
+    "Oral Glucose Tolerance Test เจาะเลือดซ้ำทุก 1 ชั่วโมงจำนวน 3 ครั้ง รวม 4 ครั้ง",
+    "Chemistry"
+  ],
+  [
+    "GCT",
+    "Blood (เลือด) ",
+    "เจาะปลายนิ้ว ตรวจโดย Glucometer",
+    "40 บาท",
+    "",
+    "",
+    "Chemistry"
+  ],
+  [
+    "1 hr. pp",
+    "Blood (เลือด) ",
+    "เจาะปลายนิ้ว ตรวจโดย Glucometer",
+    "40 บาท",
+    "",
+    "",
+    "Chemistry"
+  ],
+  [
+    "2 hr. pp",
+    "Blood (เลือด) ",
+    "เจาะปลายนิ้ว ตรวจโดย Glucometer",
+    "40 บาท",
+    "",
+    "",
+    "Chemistry"
+  ],
+  [
+    "NIPT",
+    "Blood (เลือด) 10 ml",
+    "หลอดเก็บเลือดจากหน่วยงานภายนอก",
+    "2,700 บาท",
+    "14 วัน",
+    "",
+    "ANC1"
+  ],
+  [
+    "SI (Serum iron)",
+    "Blood (เลือด) 2-3 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "100 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Chemistry"
+  ],
+  [
+    "TIBC",
+    "Blood (เลือด) 2-3 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "80 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Chemistry"
+  ],
+  [
+    "Ferritin",
+    "Blood (เลือด) 2-3 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "310 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Chemistry"
+  ],
+  [
+    "Blood lactate",
+    "Blood (เลือด) ",
+    "เจาะเลือดปลายนิ้ว ตรวจโดยเครื่อง POCT",
+    "150 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Chemistry"
+  ],
+  [
+    "LPRC",
+    "",
+    "",
+    "550 บาท",
+    "1-2 ชั่วโมง",
+    "กรณีขอเลือด แนบใบ Request ขอเลือดพร้อมกรอกข้อมูลให้ครบถ้วน",
+    "Blood bank"
+  ],
+  [
+    "LDPPC",
+    "",
+    "",
+    "6,000 บาท",
+    "ทำการขอเลือดผ่านภาคบริการโลหิต รอการยืนยันรับเลือดจากห้องปฏิบัติการ",
+    "กรณีขอเลือด แนบใบ Request ขอเลือดพร้อมกรอกข้อมูลให้ครบถ้วน",
+    "Blood bank"
+  ],
+  [
+    "FFP",
+    "",
+    "",
+    "450 บาท",
+    "1-2 ชั่วโมง",
+    "กรณีขอเลือด แนบใบ Request ขอเลือดพร้อมกรอกข้อมูลให้ครบถ้วน",
+    "Blood bank"
+  ],
+  [
+    "Cryopicipitate",
+    "",
+    "",
+    "330 บาท",
+    "ทำการขอเลือดผ่านภาคบริการโลหิต รอการยืนยันรับเลือดจากห้องปฏิบัติการ",
+    "กรณีขอเลือด แนบใบ Request ขอเลือดพร้อมกรอกข้อมูลให้ครบถ้วน",
+    "Blood bank"
+  ],
+  [
+    "Ab identification",
+    "Blood (เลือด) 20 ml",
+    "K3-EDTA Tube (ม่วง) จำนวน 8 หลอด",
+    "1,060 บาท",
+    "7 วัน",
+    "",
+    "Blood bank"
+  ],
+  [
+    "Direct Coomb’s Test (DAT)",
+    "Blood (เลือด) 2-3 ml",
+    "K3-EDTA Tube (ม่วง)",
+    "390 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Blood bank"
+  ],
+  [
+    "Indirect Coomb’s Test (IAT)",
+    "Blood (เลือด) 2-3 ml",
+    "K3-EDTA Tube (ม่วง)",
+    "120 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Blood bank"
+  ],
+  [
+    "O1",
+    "Blood (เลือด) 2-3 ml",
+    "K3-EDTA Tube (ม่วง)",
+    "60 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Blood bank"
+  ],
+  [
+    "O2",
+    "Blood (เลือด) 2-3 ml",
+    "K3-EDTA Tube (ม่วง)",
+    "60 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Blood bank"
+  ],
+  [
+    "O3",
+    "Blood (เลือด) 2-3 ml",
+    "K3-EDTA Tube (ม่วง)",
+    "60 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Blood bank"
+  ],
+  [
+    "ABO Blood group",
+    "Blood (เลือด) 2-3 ml",
+    "K3-EDTA Tube (ม่วง)",
+    "100 บาท",
+    "1 ชั่วโมง",
+    "",
+    "Blood bank"
+  ],
+  [
+    "Rh Typing",
+    "Blood (เลือด) 2-3 ml",
+    "K3-EDTA Tube (ม่วง)",
+    "50 บาท",
+    "1 ชั่วโมง",
+    "",
+    "Blood bank"
+  ],
+  [
+    "Crossmatch (G/M) (Groupmatch)",
+    "Blood (เลือด) 2-3 ml",
+    "K3-EDTA Tube (ม่วง)",
+    "150 บาท",
+    "1-2 ชั่วโมง",
+    "กรณีขอเลือด แนบใบ Request ขอเลือดพร้อมกรอกข้อมูลให้ครบถ้วน",
+    "Blood bank"
+  ],
+  [
+    "Vitamin D",
+    "Blood (เลือด) 4-5 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "900 บาท",
+    "14 วัน",
+    "",
+    "Special Lab (ใบอนุมัติเพิ่ม) แจ้งทางห้องปฏิบัติการเพื่อทำการเปิดใบแลป"
+  ],
+  [
+    "Anaerobe culture",
+    "Blood (เลือด) 4-5 ml ,  specimen อื่นๆ",
+    "ขวด Hemoculture for anaerobe (ขวดเหลือง) หรือ Thioglycolate broth กรณีเป็นสิ่งส่งตรวจอื่นๆ",
+    "300 บาท",
+    "14 วัน",
+    "กรณีต้องการเก็บตรวจโทรแจ้งขอ ภาชนะเก็บสิ่งส่งตรวจ จากห้องปฏิบัติการ",
+    "Special Lab (ใบอนุมัติเพิ่ม) แจ้งทางห้องปฏิบัติการเพื่อทำการเปิดใบแลป"
+  ],
+  [
+    "Rheumatoid factor",
+    "Blood (เลือด) 2-3 ml",
+    "Clot Activator with gel tube (สีเหลือง)",
+    "200 บาท",
+    "1-2 ชั่วโมง",
+    "",
+    "Special Lab (New)"
+  ],
+  [
+    "Special stain",
+    "",
+    "",
+    "",
+    "14 วัน",
+    "แนบแบบฟอร์มส่งตรวจ Special stain ด้วยทุกครั้ง\n: https://drive.google.com/file/d/1PK7Zmt-6mUjoeq_YQetRGdDCQLxde8Lz/view?usp=drive_link",
+    "Pathology"
+  ]
+]

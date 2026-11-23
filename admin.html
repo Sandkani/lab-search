@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>หลังบ้าน · จัดการรายการตรวจ LAB</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#0a3d3a; --teal:#0f766e; --mint:#e6f7f4; --ink:#12302d;
+  --muted:#5a736f; --line:#c9e5df; --red:#c23535; --amber:#d97706; --white:#fff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; color:var(--ink);
+  font-family:'Noto Sans Thai','Be Vietnam Pro',sans-serif;
+  background:linear-gradient(180deg,#d9f3ee,#f7fbfa 40%);
+  min-height:100vh;
+}
+h1,h2,h3{font-family:'Be Vietnam Pro',sans-serif;margin:0;letter-spacing:-.02em}
+button,input,textarea,select{font:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:24px 16px 48px}
+.top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;margin-bottom:20px}
+.brand{font-size:22px;font-weight:700;color:var(--deep)}
+.sub{color:var(--muted);font-size:14px;margin-top:4px}
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:18px;
+  padding:20px;box-shadow:0 12px 30px rgba(10,61,58,.08);
+}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:16px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.stat b{display:block;font-size:24px;color:var(--deep);line-height:1.2}
+.stat span{color:var(--muted);font-size:13px}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.btn{
+  border:0;border-radius:12px;padding:10px 14px;font-weight:700;cursor:pointer;
+  background:var(--teal);color:#fff;
+}
+.btn:hover{filter:brightness(1.05)}
+.btn.ghost{background:#fff;color:var(--deep);border:1px solid var(--line)}
+.btn.warn{background:var(--amber)}
+.btn.danger{background:var(--red)}
+.btn:disabled{opacity:.5;cursor:default}
+input,textarea{
+  width:100%;border:1px solid var(--line);border-radius:12px;
+  padding:10px 12px;background:#fff;color:var(--ink);
+}
+textarea{min-height:72px;resize:vertical}
+label{display:block;font-size:13px;font-weight:600;color:var(--muted);margin:0 0 6px}
+.field{margin-bottom:12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.login-box{max-width:420px;margin:12vh auto}
+.err{color:var(--red);font-size:14px;margin-top:8px;font-weight:600}
+.ok{color:#0f9f6e;font-size:14px;margin-top:8px;font-weight:600}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;margin:16px 0}
+.search{flex:1;min-width:220px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:700;white-space:nowrap}
+td .name{font-weight:700;color:var(--deep)}
+td .muted{color:var(--muted);font-size:12px}
+.actions{display:flex;gap:6px;flex-wrap:wrap}
+.modal-bg{
+  position:fixed;inset:0;background:rgba(8,40,38,.45);display:none;
+  align-items:flex-end;justify-content:center;padding:16px;z-index:40;
+}
+.modal-bg.open{display:flex}
+.modal{
+  background:#fff;border-radius:18px;width:min(640px,100%);
+  max-height:90vh;overflow:auto;padding:18px;
+}
+.hidden{display:none!important}
+a.link{color:var(--teal);font-weight:600;text-decoration:none}
+@media(max-width:800px){
+  .stats{grid-template-columns:1fr}
+  .grid2{grid-template-columns:1fr}
+  table{display:block;overflow-x:auto}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- LOGIN -->
+  <section id="loginView" class="login-box card">
+    <h1 class="brand">หลังบ้าน LAB</h1>
+    <p class="sub">เข้าสู่ระบบด้วยรหัส ADMIN_SECRET</p>
+    <div class="field" style="margin-top:16px">
+      <label for="secretInput">ADMIN_SECRET</label>
+      <input id="secretInput" type="password" autocomplete="current-password" placeholder="ใส่รหัสลับ">
+    </div>
+    <button class="btn" id="loginBtn" type="button">เข้าสู่ระบบ</button>
+    <div class="err" id="loginErr"></div>
+    <p class="sub" style="margin-top:14px">ตั้งค่าในไฟล์ <code>.env.local</code> หรือบน Vercel Environment Variables</p>
+    <p class="sub"><a class="link" href="/">← กลับหน้าค้นหา</a></p>
+  </section>
+
+  <!-- DASHBOARD -->
+  <section id="dashView" class="hidden">
+    <div class="top">
+      <div>
+        <h1 class="brand">จัดการรายการตรวจ</h1>
+        <p class="sub" id="sourceLabel">—</p>
+      </div>
+      <div class="row">
+        <a class="link" href="/">หน้าค้นหา</a>
+        <button class="btn ghost" id="logoutBtn" type="button">ออกจากระบบ</button>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b id="statCount">0</b><span>จำนวนรายการตรวจ</span></div>
+      <div class="stat"><b id="statSource">—</b><span>แหล่งข้อมูล</span></div>
+      <div class="stat"><b id="statStatus">พร้อม</b><span>สถานะระบบ</span></div>
+    </div>
+
+    <div class="toolbar">
+      <input class="search" id="filterInput" type="search" placeholder="ค้นในตาราง เช่น CBC, ม่วง, Chemistry">
+      <div class="row">
+        <button class="btn" id="addBtn" type="button">+ เพิ่มรายการ</button>
+        <button class="btn warn" id="seedBtn" type="button">Seed ใหม่จาก JSON</button>
+      </div>
+    </div>
+    <div class="ok" id="flashOk"></div>
+    <div class="err" id="flashErr"></div>
+
+    <div class="card" style="padding:0;overflow:auto">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>รายการตรวจ</th>
+            <th>ภาชนะ</th>
+            <th>ราคา</th>
+            <th>TAT</th>
+            <th>หมวดหมู่</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+<div class="modal-bg" id="modalBg">
+  <div class="modal">
+    <h2 id="modalTitle" style="margin-bottom:12px">เพิ่มรายการ</h2>
+    <input type="hidden" id="editId">
+    <div class="grid2">
+      <div class="field"><label>รายการตรวจ *</label><input id="f_test_name"></div>
+      <div class="field"><label>ภาชนะเก็บสิ่งส่งตรวจ</label><input id="f_container" placeholder="เช่น K3-EDTA Tube (ม่วง)"></div>
+      <div class="field"><label>ประเภทสิ่งส่งตรวจ</label><input id="f_specimen_type"></div>
+      <div class="field"><label>ราคา</label><input id="f_price"></div>
+      <div class="field"><label>ระยะเวลารอคอยผล (TAT)</label><input id="f_tat"></div>
+      <div class="field"><label>หมวดหมู่ (ใบ Lab)</label><input id="f_category"></div>
+    </div>
+    <div class="field"><label>คำอธิบายเพิ่มเติม</label><textarea id="f_description"></textarea></div>
+    <div class="row" style="justify-content:flex-end;margin-top:8px">
+      <button class="btn ghost" type="button" id="cancelBtn">ยกเลิก</button>
+      <button class="btn" type="button" id="saveBtn">บันทึก</button>
+    </div>
+    <div class="err" id="modalErr"></div>
+  </div>
+</div>
+
+<script>
+const KEY = 'lab_admin_secret';
+let items = [];
+let secret = sessionStorage.getItem(KEY) || '';
+
+const $ = (id) => document.getElementById(id);
+
+function headers() {
+  return {
+    'Content-Type': 'application/json',
+    'x-admin-secret': secret,
+  };
+}
+
+async function api(method, body) {
+  const res = await fetch('/api/admin', {
+    method,
+    headers: headers(),
+    body: body ? JSON.stringify(body) : undefined,
+  });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(data.error || ('HTTP ' + res.status));
+  return data;
+}
+
+function showLogin(err = '') {
+  $('loginView').classList.remove('hidden');
+  $('dashView').classList.add('hidden');
+  $('loginErr').textContent = err;
+}
+
+function showDash() {
+  $('loginView').classList.add('hidden');
+  $('dashView').classList.remove('hidden');
+}
+
+function flash(ok, msg) {
+  $('flashOk').textContent = ok ? msg : '';
+  $('flashErr').textContent = ok ? '' : msg;
+}
+
+function renderStats(data) {
+  $('statCount').textContent = data.count ?? items.length;
+  $('statSource').textContent = data.source === 'database' ? 'DB' : 'JSON';
+  $('sourceLabel').textContent =
+    data.database === 'configured'
+      ? 'เชื่อมต่อฐานข้อมูล Neon แล้ว'
+      : 'โหมดไฟล์ data/labs.json (ยังไม่ตั้ง DATABASE_URL)';
+}
+
+function renderTable() {
+  const q = ($('filterInput').value || '').toLowerCase().trim();
+  const rows = items.filter((it) => {
+    if (!q) return true;
+    return [
+      it.test_name, it.container, it.specimen_type, it.price, it.tat, it.category, it.description,
+    ].join(' ').toLowerCase().includes(q);
+  });
+
+  $('tbody').innerHTML = rows.map((it) => `
+    <tr>
+      <td>${it.id}</td>
+      <td>
+        <div class="name">${esc(it.test_name)}</div>
+        <div class="muted">${esc(it.specimen_type || '')}</div>
+      </td>
+      <td>${esc(it.container || '-')}</td>
+      <td>${esc(it.price || '-')}</td>
+      <td>${esc(it.tat || '-')}</td>
+      <td>${esc(it.category || '-')}</td>
+      <td>
+        <div class="actions">
+          <button class="btn ghost" type="button" onclick="openEdit(${it.id})">แก้ไข</button>
+          <button class="btn danger" type="button" onclick="removeItem(${it.id})">ลบ</button>
+        </div>
+      </td>
+    </tr>
+  `).join('') || `<tr><td colspan="7">ไม่พบรายการ</td></tr>`;
+}
+
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, (c) => (
+    { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
+  ));
+}
+
+async function refresh() {
+  const data = await api('GET');
+  items = data.items || [];
+  renderStats(data);
+  renderTable();
+}
+
+async function tryLogin(fromStorage = false) {
+  try {
+    await api('POST', { action: 'login' });
+    showDash();
+    await refresh();
+    if (!fromStorage) flash(true, 'เข้าสู่ระบบสำเร็จ');
+  } catch (err) {
+    sessionStorage.removeItem(KEY);
+    secret = '';
+    showLogin(err.message);
+  }
+}
+
+$('loginBtn').onclick = async () => {
+  secret = $('secretInput').value.trim();
+  if (!secret) {
+    $('loginErr').textContent = 'กรุณาใส่รหัส';
+    return;
+  }
+  sessionStorage.setItem(KEY, secret);
+  await tryLogin(false);
+};
+
+$('logoutBtn').onclick = () => {
+  sessionStorage.removeItem(KEY);
+  secret = '';
+  showLogin('');
+};
+
+$('filterInput').oninput = renderTable;
+
+$('addBtn').onclick = () => openCreate();
+$('cancelBtn').onclick = closeModal;
+$('modalBg').addEventListener('click', (e) => {
+  if (e.target === $('modalBg')) closeModal();
+});
+
+$('seedBtn').onclick = async () => {
+  if (!confirm('จะล้างข้อมูลในฐานข้อมูล/ไฟล์ แล้วโหลดใหม่จาก data/labs.json ใช่ไหม?')) return;
+  try {
+    const out = await api('POST', { action: 'seed', replace: true });
+    await refresh();
+    flash(true, `Seed สำเร็จ ${out.inserted} รายการ`);
+  } catch (err) {
+    flash(false, err.message);
+  }
+};
+
+function openCreate() {
+  $('modalTitle').textContent = 'เพิ่มรายการ';
+  $('editId').value = '';
+  fillForm({});
+  $('modalErr').textContent = '';
+  $('modalBg').classList.add('open');
+}
+
+window.openEdit = function (id) {
+  const it = items.find((x) => Number(x.id) === Number(id));
+  if (!it) return;
+  $('modalTitle').textContent = 'แก้ไขรายการ #' + id;
+  $('editId').value = String(id);
+  fillForm(it);
+  $('modalErr').textContent = '';
+  $('modalBg').classList.add('open');
+};
+
+function fillForm(it) {
+  $('f_test_name').value = it.test_name || '';
+  $('f_specimen_type').value = it.specimen_type || '';
+  $('f_container').value = it.container || '';
+  $('f_price').value = it.price || '';
+  $('f_tat').value = it.tat || '';
+  $('f_description').value = it.description || '';
+  $('f_category').value = it.category || '';
+}
+
+function readForm() {
+  return {
+    test_name: $('f_test_name').value,
+    specimen_type: $('f_specimen_type').value,
+    container: $('f_container').value,
+    price: $('f_price').value,
+    tat: $('f_tat').value,
+    description: $('f_description').value,
+    category: $('f_category').value,
+  };
+}
+
+function closeModal() {
+  $('modalBg').classList.remove('open');
+}
+
+$('saveBtn').onclick = async () => {
+  const item = readForm();
+  const id = $('editId').value;
+  try {
+    if (id) await api('PUT', { id: Number(id), item });
+    else await api('POST', { action: 'create', item });
+    closeModal();
+    await refresh();
+    flash(true, id ? 'บันทึกการแก้ไขแล้ว' : 'เพิ่มรายการแล้ว');
+  } catch (err) {
+    $('modalErr').textContent = err.message;
+  }
+};
+
+window.removeItem = async function (id) {
+  const it = items.find((x) => Number(x.id) === Number(id));
+  if (!confirm(`ลบรายการ “${it?.test_name || id}” ใช่ไหม?`)) return;
+  try {
+    await api('DELETE', { id: Number(id) });
+    await refresh();
+    flash(true, 'ลบรายการแล้ว');
+  } catch (err) {
+    flash(false, err.message);
+  }
+};
+
+if (secret) tryLogin(true);
+else showLogin('');
+$('secretInput').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') $('loginBtn').click();
+});
+</script>
+</body>
+</html>
