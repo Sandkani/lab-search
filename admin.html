@@ -6,114 +6,333 @@
 <title>หลังบ้าน · จัดการรายการตรวจ LAB</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700;800&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --deep:#0a3d3a; --teal:#0f766e; --mint:#e6f7f4; --ink:#12302d;
-  --muted:#5a736f; --line:#c9e5df; --red:#c23535; --amber:#d97706; --white:#fff;
+  --deep:#073532; --teal:#0e756c; --ink:#102826;
+  --muted:#5c7571; --line:#d5ebe6; --red:#c23535; --amber:#d97706;
+  --lip:#085850; --card:#f7fcfb;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
   margin:0; color:var(--ink);
   font-family:'Noto Sans Thai','Be Vietnam Pro',sans-serif;
-  background:linear-gradient(180deg,#d9f3ee,#f7fbfa 40%);
   min-height:100vh;
+  background:
+    radial-gradient(900px 480px at 8% -8%, rgba(20,184,166,.28), transparent 60%),
+    radial-gradient(700px 420px at 100% 0%, rgba(217,119,6,.14), transparent 55%),
+    linear-gradient(180deg,#c9efe8 0%, #e7f7f3 28%, #f4fbf9 100%);
+  -webkit-font-smoothing:antialiased;
 }
-h1,h2,h3{font-family:'Be Vietnam Pro',sans-serif;margin:0;letter-spacing:-.02em}
+body::before{
+  content:"";
+  position:fixed; inset:0; pointer-events:none; z-index:0;
+  background-image:
+    linear-gradient(rgba(7,53,50,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(7,53,50,.045) 1px, transparent 1px);
+  background-size:32px 32px;
+  mask-image:linear-gradient(180deg,#000 0%, transparent 80%);
+}
+.glow{
+  position:fixed; border-radius:50%; pointer-events:none; z-index:0; filter:blur(8px);
+}
+.glow-a{width:280px;height:280px;left:-80px;top:120px;background:radial-gradient(circle,rgba(255,255,255,.7),transparent 68%)}
+.glow-b{width:340px;height:340px;right:-120px;bottom:40px;background:radial-gradient(circle,rgba(20,184,166,.22),transparent 70%)}
+h1,h2,h3{font-family:'Be Vietnam Pro','Noto Sans Thai',sans-serif;margin:0;letter-spacing:-.03em}
 button,input,textarea,select{font:inherit}
-.wrap{max-width:1100px;margin:0 auto;padding:24px 16px 48px}
-.top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;margin-bottom:20px}
-.brand{font-size:22px;font-weight:700;color:var(--deep)}
-.sub{color:var(--muted);font-size:14px;margin-top:4px}
-.card{
-  background:#fff;border:1px solid var(--line);border-radius:18px;
-  padding:20px;box-shadow:0 12px 30px rgba(10,61,58,.08);
+:focus-visible{outline:3px solid #f0a04a;outline-offset:2px}
+.wrap{position:relative;z-index:1;max-width:1140px;margin:0 auto;padding:28px 18px 64px}
+
+.top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;margin-bottom:22px}
+.brand-block{display:flex;align-items:center;gap:14px}
+.mark{
+  width:58px;height:58px;border-radius:18px;flex:none;
+  display:grid;place-items:center;color:#fff;
+  background:linear-gradient(160deg,#2ec4b6 0%, #0e756c 55%, #085850 100%);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.45) inset,
+    0 -8px 12px rgba(0,0,0,.12) inset,
+    0 10px 0 #064840,
+    0 18px 28px rgba(8,72,64,.28);
 }
-.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:16px}
-.stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px}
-.stat b{display:block;font-size:24px;color:var(--deep);line-height:1.2}
-.stat span{color:var(--muted);font-size:13px}
-.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.eyebrow{margin:0;font-size:11px;font-weight:700;letter-spacing:.16em;color:#0e756c;text-transform:uppercase}
+.brand{font-size:26px;font-weight:800;color:var(--deep);line-height:1.15}
+.sub{color:var(--muted);font-size:14px;margin:3px 0 0}
+
+.slab{
+  position:relative;
+  background:linear-gradient(165deg,#ffffff 0%, #f7fcfb 55%, #eef6f4 100%);
+  border-radius:26px;
+  border:1px solid rgba(255,255,255,.85);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.95) inset,
+    0 -3px 0 rgba(7,53,50,.04) inset,
+    0 1px 2px rgba(7,53,50,.05),
+    0 14px 28px -12px rgba(7,53,50,.22),
+    0 32px 50px -20px rgba(7,53,50,.2);
+}
+.slab::before{
+  content:"";
+  position:absolute; left:22px; right:22px; top:0; height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.95),transparent);
+  pointer-events:none;
+}
+.card{padding:22px}
+.login-box{max-width:440px;margin:10vh auto;padding:28px 26px 24px}
+
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:18px;perspective:1100px}
+.stat{
+  display:flex;align-items:center;gap:14px;
+  padding:18px 18px 16px; border-radius:22px;
+  background:linear-gradient(160deg,#ffffff 0%, #f4fbf9 100%);
+  border:1px solid rgba(255,255,255,.9);
+  box-shadow:
+    0 1px 0 #fff inset,
+    0 -2px 0 rgba(7,53,50,.03) inset,
+    0 8px 0 rgba(213,232,227,.9),
+    0 16px 28px -10px rgba(7,53,50,.22);
+  transition:transform .22s ease, box-shadow .22s ease;
+}
+.stat:hover{
+  transform:translateY(-6px);
+  box-shadow:
+    0 1px 0 #fff inset,
+    0 12px 0 rgba(213,232,227,.55),
+    0 26px 36px -12px rgba(7,53,50,.28);
+}
+.stat-ico{
+  width:48px;height:48px;border-radius:16px;flex:none;
+  display:grid;place-items:center;
+  background:linear-gradient(180deg,#ffffff,#e5f5f2);
+  color:var(--teal);
+  box-shadow:
+    0 1px 0 #fff inset,
+    0 4px 0 #d3e7e3,
+    0 8px 12px rgba(7,53,50,.08);
+}
+.stat b{
+  display:block;font-size:28px;font-weight:800;color:var(--deep);line-height:1.05;
+  font-variant-numeric:tabular-nums;
+  text-shadow:0 1px 0 #fff, 0 2px 0 rgba(7,53,50,.06);
+}
+.stat span{color:var(--muted);font-size:13px;font-weight:600}
+#statStatus{color:#0c8f62}
+
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .btn{
-  border:0;border-radius:12px;padding:10px 14px;font-weight:700;cursor:pointer;
-  background:var(--teal);color:#fff;
+  --lip:#085850;
+  border:0;border-radius:14px;padding:11px 16px;font-weight:700;cursor:pointer;
+  color:#fff; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; gap:6px;
+  background:linear-gradient(180deg,#27c4b4 0%, #0e756c 100%);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.4) inset,
+    0 -2px 0 rgba(0,0,0,.08) inset,
+    0 4px 0 var(--lip),
+    0 10px 16px rgba(8,72,64,.24);
+  transition:transform .12s ease, box-shadow .12s ease, filter .12s ease;
 }
-.btn:hover{filter:brightness(1.05)}
-.btn.ghost{background:#fff;color:var(--deep);border:1px solid var(--line)}
-.btn.warn{background:var(--amber)}
-.btn.danger{background:var(--red)}
-.btn:disabled{opacity:.5;cursor:default}
+.btn:hover{filter:brightness(1.04);transform:translateY(-1px)}
+.btn:active{
+  transform:translateY(3px);
+  box-shadow:0 1px 0 rgba(255,255,255,.28) inset, 0 1px 0 var(--lip);
+}
+.btn.ghost{
+  --lip:#c9ddd8;
+  background:linear-gradient(180deg,#ffffff,#f2f8f6);
+  color:var(--deep);
+  box-shadow:
+    0 1px 0 #fff inset,
+    0 4px 0 var(--lip),
+    0 10px 14px rgba(7,53,50,.08);
+}
+.btn.warn{
+  --lip:#9a5404;
+  background:linear-gradient(180deg,#f6b15a,#d97706);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.45) inset,
+    0 4px 0 var(--lip),
+    0 10px 16px rgba(217,119,6,.28);
+}
+.btn.danger{
+  --lip:#8e2424;
+  background:linear-gradient(180deg,#ef6a64,#c23535);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.35) inset,
+    0 3px 0 var(--lip),
+    0 8px 12px rgba(194,53,53,.22);
+}
+.btn.sm{padding:7px 12px;border-radius:11px;font-size:13px}
+.btn:disabled{opacity:.5;cursor:default;transform:none}
+
 input,textarea{
-  width:100%;border:1px solid var(--line);border-radius:12px;
-  padding:10px 12px;background:#fff;color:var(--ink);
+  width:100%;border:1px solid #d7ebe6;border-radius:14px;
+  padding:12px 14px;color:var(--ink);
+  background:linear-gradient(180deg,#e9f4f1,#f8fcfb);
+  box-shadow:inset 0 2px 5px rgba(7,53,50,.08), 0 1px 0 #fff;
 }
-textarea{min-height:72px;resize:vertical}
-label{display:block;font-size:13px;font-weight:600;color:var(--muted);margin:0 0 6px}
-.field{margin-bottom:12px}
+input:focus,textarea:focus{
+  outline:none;border-color:#8fd4cb;
+  box-shadow:inset 0 2px 5px rgba(7,53,50,.06), 0 0 0 4px rgba(20,184,166,.18);
+}
+textarea{min-height:84px;resize:vertical}
+label{display:block;font-size:13px;font-weight:700;color:var(--muted);margin:0 0 6px}
+.field{margin-bottom:14px}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.login-box{max-width:420px;margin:12vh auto}
-.err{color:var(--red);font-size:14px;margin-top:8px;font-weight:600}
-.ok{color:#0f9f6e;font-size:14px;margin-top:8px;font-weight:600}
-.toolbar{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;margin:16px 0}
-.search{flex:1;min-width:220px}
-table{width:100%;border-collapse:collapse;font-size:14px}
-th,td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-th{font-size:12px;color:var(--muted);font-weight:700;white-space:nowrap}
+
+.ok,.err{display:none}
+.ok:not(:empty),.err:not(:empty){
+  display:inline-flex;align-items:center;gap:8px;
+  margin:0 0 14px;padding:8px 14px;border-radius:999px;
+  font-size:14px;font-weight:700;
+}
+.ok:not(:empty){
+  color:#0b7a52;
+  background:linear-gradient(180deg,#f3fff8,#dff6ea);
+  box-shadow:0 1px 0 #fff inset, 0 3px 0 #b7e4cc, 0 8px 14px rgba(12,143,98,.12);
+}
+.err:not(:empty){
+  color:#9d2424;
+  background:linear-gradient(180deg,#fff6f6,#fde8e8);
+  box-shadow:0 1px 0 #fff inset, 0 3px 0 #f0c8c8, 0 8px 14px rgba(194,53,53,.12);
+}
+
+.toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin:6px 0 16px}
+.search{flex:1;min-width:240px}
+
+.table-slab{padding:8px 8px 10px;overflow:auto}
+table{width:100%;border-collapse:separate;border-spacing:0;font-size:14px}
+th,td{padding:12px 12px;text-align:left;vertical-align:middle}
+th{
+  position:sticky;top:0;z-index:1;
+  font-size:12px;color:var(--muted);font-weight:700;white-space:nowrap;
+  background:linear-gradient(180deg,#f8fcfb,#eef6f4);
+  box-shadow:0 1px 0 #d7ebe6;
+}
+th:first-child{border-radius:16px 0 0 0}
+th:last-child{border-radius:0 16px 0 0;text-align:right}
+tbody tr{transition:background .15s ease}
+tbody tr:nth-child(even){background:rgba(230,247,244,.45)}
+tbody tr:hover{background:#fff;box-shadow:inset 4px 0 0 #14b8a6}
 td .name{font-weight:700;color:var(--deep)}
-td .muted{color:var(--muted);font-size:12px}
-.actions{display:flex;gap:6px;flex-wrap:wrap}
+td .muted{color:var(--muted);font-size:12px;margin-top:2px}
+.idchip{
+  display:inline-flex;min-width:32px;justify-content:center;
+  padding:3px 8px;border-radius:9px;font-weight:800;font-size:12px;color:var(--deep);
+  font-variant-numeric:tabular-nums;
+  background:linear-gradient(180deg,#fff,#e7f4f1);
+  box-shadow:0 1px 0 #fff inset, 0 2px 0 #d3e6e1;
+}
+.price{font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.cat{
+  display:inline-flex;padding:4px 10px;border-radius:999px;
+  font-size:12px;font-weight:700;color:#0e5c56;
+  background:linear-gradient(180deg,#ffffff,#e5f6f3);
+  box-shadow:0 1px 0 #fff inset, 0 2px 0 #cfe6e1;
+}
+.actions{display:flex;gap:8px;justify-content:flex-end}
+.empty td{text-align:center;color:var(--muted);padding:28px}
+
 .modal-bg{
-  position:fixed;inset:0;background:rgba(8,40,38,.45);display:none;
-  align-items:flex-end;justify-content:center;padding:16px;z-index:40;
+  position:fixed;inset:0;display:none;
+  align-items:center;justify-content:center;padding:20px;z-index:40;
+  background:rgba(6,28,26,.42);
+  backdrop-filter:blur(8px);
 }
 .modal-bg.open{display:flex}
 .modal{
-  background:#fff;border-radius:18px;width:min(640px,100%);
-  max-height:90vh;overflow:auto;padding:18px;
+  width:min(680px,100%);max-height:90vh;overflow:auto;
+  padding:22px 22px 18px;border-radius:28px;
+  background:linear-gradient(165deg,#ffffff,#f4faf8);
+  border:1px solid rgba(255,255,255,.8);
+  box-shadow:
+    0 1px 0 #fff inset,
+    0 24px 0 rgba(7,53,50,.05),
+    0 40px 80px rgba(6,28,26,.35);
+  animation:pop .22s ease;
 }
+@keyframes pop{from{transform:translateY(10px) scale(.98);opacity:0}to{transform:none;opacity:1}}
 .hidden{display:none!important}
-a.link{color:var(--teal);font-weight:600;text-decoration:none}
+a.link{color:var(--teal);font-weight:700;text-decoration:none}
+code{font-size:.92em;background:#e7f4f1;padding:1px 6px;border-radius:6px}
+
 @media(max-width:800px){
-  .stats{grid-template-columns:1fr}
-  .grid2{grid-template-columns:1fr}
-  table{display:block;overflow-x:auto}
+  .stats,.grid2{grid-template-columns:1fr}
+  .brand{font-size:22px}
+  .stat:hover{transform:none}
+  .modal-bg{align-items:flex-end;padding:10px}
+  .modal{border-radius:24px 24px 16px 16px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
 }
 </style>
 </head>
 <body>
+<div class="glow glow-a"></div>
+<div class="glow glow-b"></div>
 <div class="wrap">
 
   <!-- LOGIN -->
-  <section id="loginView" class="login-box card">
-    <h1 class="brand">หลังบ้าน LAB</h1>
+  <section id="loginView" class="login-box slab card">
+    <div class="brand-block" style="margin-bottom:8px">
+      <div class="mark" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v5.2L5.4 17.2A3.2 3.2 0 0 0 8.2 22h7.6a3.2 3.2 0 0 0 2.8-4.8L14 8.2V3"/><path d="M8.2 14h7.6"/></svg>
+      </div>
+      <div>
+        <p class="eyebrow">Lab console</p>
+        <h1 class="brand">หลังบ้าน LAB</h1>
+      </div>
+    </div>
     <p class="sub">เข้าสู่ระบบด้วยรหัส ADMIN_SECRET</p>
-    <div class="field" style="margin-top:16px">
+    <div class="field" style="margin-top:18px">
       <label for="secretInput">ADMIN_SECRET</label>
       <input id="secretInput" type="password" autocomplete="current-password" placeholder="ใส่รหัสลับ">
     </div>
-    <button class="btn" id="loginBtn" type="button">เข้าสู่ระบบ</button>
+    <button class="btn" id="loginBtn" type="button" style="width:100%">เข้าสู่ระบบ</button>
     <div class="err" id="loginErr"></div>
-    <p class="sub" style="margin-top:14px">ตั้งค่าในไฟล์ <code>.env.local</code> หรือบน Vercel Environment Variables</p>
+    <p class="sub" style="margin-top:16px">ตั้งค่าในไฟล์ <code>.env.local</code> หรือบน Vercel Environment Variables</p>
     <p class="sub"><a class="link" href="/">← กลับหน้าค้นหา</a></p>
   </section>
 
   <!-- DASHBOARD -->
   <section id="dashView" class="hidden">
     <div class="top">
-      <div>
-        <h1 class="brand">จัดการรายการตรวจ</h1>
-        <p class="sub" id="sourceLabel">—</p>
+      <div class="brand-block">
+        <div class="mark" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v5.2L5.4 17.2A3.2 3.2 0 0 0 8.2 22h7.6a3.2 3.2 0 0 0 2.8-4.8L14 8.2V3"/><path d="M8.2 14h7.6"/></svg>
+        </div>
+        <div>
+          <p class="eyebrow">Lab console</p>
+          <h1 class="brand">จัดการรายการตรวจ</h1>
+          <p class="sub" id="sourceLabel">—</p>
+        </div>
       </div>
       <div class="row">
-        <a class="link" href="/">หน้าค้นหา</a>
+        <a class="btn ghost" href="/">หน้าค้นหา</a>
         <button class="btn ghost" id="logoutBtn" type="button">ออกจากระบบ</button>
       </div>
     </div>
 
     <div class="stats">
-      <div class="stat"><b id="statCount">0</b><span>จำนวนรายการตรวจ</span></div>
-      <div class="stat"><b id="statSource">—</b><span>แหล่งข้อมูล</span></div>
-      <div class="stat"><b id="statStatus">พร้อม</b><span>สถานะระบบ</span></div>
+      <div class="stat">
+        <div class="stat-ico" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M8 6h12M8 12h12M8 18h12"/><path d="M4 6h.01M4 12h.01M4 18h.01"/></svg>
+        </div>
+        <div><b id="statCount">0</b><span>จำนวนรายการตรวจ</span></div>
+      </div>
+      <div class="stat">
+        <div class="stat-ico" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>
+        </div>
+        <div><b id="statSource">—</b><span>แหล่งข้อมูล</span></div>
+      </div>
+      <div class="stat">
+        <div class="stat-ico" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.2-2.8 7.4-7 8.5C7.8 19.4 5 16.2 5 12V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <div><b id="statStatus">พร้อม</b><span>สถานะระบบ</span></div>
+      </div>
     </div>
 
     <div class="toolbar">
@@ -126,7 +345,7 @@ a.link{color:var(--teal);font-weight:600;text-decoration:none}
     <div class="ok" id="flashOk"></div>
     <div class="err" id="flashErr"></div>
 
-    <div class="card" style="padding:0;overflow:auto">
+    <div class="slab table-slab">
       <table>
         <thead>
           <tr>
@@ -136,7 +355,7 @@ a.link{color:var(--teal);font-weight:600;text-decoration:none}
             <th>ราคา</th>
             <th>TAT</th>
             <th>หมวดหมู่</th>
-            <th></th>
+            <th>จัดการ</th>
           </tr>
         </thead>
         <tbody id="tbody"></tbody>
@@ -146,8 +365,8 @@ a.link{color:var(--teal);font-weight:600;text-decoration:none}
 </div>
 
 <div class="modal-bg" id="modalBg">
-  <div class="modal">
-    <h2 id="modalTitle" style="margin-bottom:12px">เพิ่มรายการ</h2>
+  <div class="modal slab">
+    <h2 id="modalTitle" class="brand" style="font-size:22px;margin-bottom:14px">เพิ่มรายการ</h2>
     <input type="hidden" id="editId">
     <div class="grid2">
       <div class="field"><label>รายการตรวจ *</label><input id="f_test_name"></div>
@@ -227,23 +446,23 @@ function renderTable() {
 
   $('tbody').innerHTML = rows.map((it) => `
     <tr>
-      <td>${it.id}</td>
+      <td><span class="idchip">${it.id}</span></td>
       <td>
         <div class="name">${esc(it.test_name)}</div>
         <div class="muted">${esc(it.specimen_type || '')}</div>
       </td>
       <td>${esc(it.container || '-')}</td>
-      <td>${esc(it.price || '-')}</td>
+      <td><span class="price">${esc(it.price || '-')}</span></td>
       <td>${esc(it.tat || '-')}</td>
-      <td>${esc(it.category || '-')}</td>
+      <td>${it.category ? `<span class="cat">${esc(it.category)}</span>` : '-'}</td>
       <td>
         <div class="actions">
-          <button class="btn ghost" type="button" onclick="openEdit(${it.id})">แก้ไข</button>
-          <button class="btn danger" type="button" onclick="removeItem(${it.id})">ลบ</button>
+          <button class="btn ghost sm" type="button" onclick="openEdit(${it.id})">แก้ไข</button>
+          <button class="btn danger sm" type="button" onclick="removeItem(${it.id})">ลบ</button>
         </div>
       </td>
     </tr>
-  `).join('') || `<tr><td colspan="7">ไม่พบรายการ</td></tr>`;
+  `).join('') || `<tr class="empty"><td colspan="7">ไม่พบรายการที่ตรงกับคำค้น</td></tr>`;
 }
 
 function esc(s) {
